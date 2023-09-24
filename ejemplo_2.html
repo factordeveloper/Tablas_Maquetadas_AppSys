@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABAJO #3</title>
+</head>
+
+<body>
+    <style>
+    @page {
+        margin: 1.5cm 0.5cm 1cm 0.5cm;
+    }
+
+    .salto {
+        page-break-after: always;
+    }
+
+    .wd100 {
+        width: 100%;
+    }
+
+    .salto {
+        page-break-after: always;
+    }
+
+    .table-main {
+        border: 1px solid black;
+        width: 100%;
+        height: auto;
+        margin-top: -20px;
+    }
+
+    .img-valorar {
+        object-fit: cover;
+        height: 90px;
+        width: 140px;
+        margin: 0px;
+    }
+
+    .title-main {
+        text-align: center;
+        float: right;
+        font-weight: 900;
+        width: 100%;
+        margin-left: 220px;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .td-strong {
+        font-size: 8px;
+    }
+
+    .td-strong-espe {
+        font-size: 9px;
+        font-weight: bold;
+        padding: 3px;
+        background-color: #c2c2c2;
+    }
+    .td-strong-border{
+        font-size: 9px;
+        font-weight: bold;
+        padding: 3px;
+        border: dotted 1px black;
+        text-align: center;
+        background-color: #c2c2c2;
+    }
+    .pie-pagina {
+        text-align: center;
+        font-size: 9px;
+    }
+
+    /* INICIO PAGINA 9 */
+    </style>
+    <table class="table-main">
+        <table class="header wd100">
+            <tbody>
+                <tr class="header">
+                    <td class="img-title">
+                        <img class="img-valorar" src="img/Valorar.png" alt="imgvalorar" />
+                    </td>
+                    <td class=" title-main">
+                        <h4>INGENIEROS ARQUITECTOS Y AGRIMARES, WILAU S.R.L <br />
+                            <strong>INFORME TECNICO DE TASACION INMOBILIARIA</strong>
+                        </h4>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="wd100">
+            <tr>
+                <td class="td-strong">FECHA ELABORACIÓN DEL INFORME</td>
+                <td class="td-strong">data->fecha</td>
+                <td class="td-strong">MUNICIPIO</td>
+                <td class="td-strong">data->muni</td>
+            </tr>
+            <tr>
+                <td class="td-strong">FINALIDAD O USO DE TASACIÓN</td>
+                <td class="td-strong">data->finalidad</td>
+                <td class="td-strong">CODIGO POSTAL No. </td>
+                <td class="td-strong">data->codigo</td>
+            </tr>
+            <tr>
+                <td class="td-strong">ENTIDAD BANCARIA</td>
+                <td class="td-strong">data->entidad</td>
+                <td class="td-strong">CODIGO POSTAL No.</td>
+                <td class="td-strong">data->codigo</td>
+            </tr>
+        </table>
+        <table class="wd100">
+            <tr>
+                <td class="td-strong-espe">1. -GENERALES</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">SOLICITANTES(S)</td>
+                <td class="td-strong">data->soli </td>
+                <td class="td-strong">VISANTO PROPERTIES MANGEMENT</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">REGISTRO RNC No. </td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">data->regi</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PROPIETARIO(A)(S)</td>
+                <td class="td-strong">data->propi </td>
+                <td class="td-strong">FIDEICOMISO RESIDENCIAL SANTIAGO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">REGISTRO RNC No. </td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data->regi</td>
+                <td class="td-strong"></td>
+            </tr>
+        </table>
+        <table class="wd100">
+            <tr>
+                <td class="td-strong" colspan="3">DIRECCIÓN Y TIPO DE INMUEBLE</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="5">data->direccion</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">SECTOR</td>
+                <td class="td-strong">data->sector</td>
+                <td class="td-strong">PROVINCIA</td>
+                <td class="td-strong" colspan="2">data->pro</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="3">LINDEROS DE LA MANZANA</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">AL NORTE:</td>
+                <td class="td-strong">data->norte</td>
+                <td class="td-strong">AL ESTE:</td>
+                <td class="td-strong" colspan="2">data->este</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">AL SUR:</td>
+                <td class="td-strong">data->sur</td>
+                <td class="td-strong">AL OESTE:</td>
+                <td class="td-strong" colspan="2">data->oeste</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong-espe" colspan="6">2.- NALISIS O ASPECTO LEGAL DEL INMUEBLE</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="2">MATRICULA (S) No(s).</td>
+                <td></td>
+                <td class="td-strong">data->m</td>
+                <td class="td-strong" colspan="2">DOCUMENTO AVAL QUE AMPARA</td>
+                <td></td>
+                <td class="td-strong">data->(10) CERTIFICADOS DE TITULOS </td>
+                <td class="td-strong">FECHA DE EMISIÓN DE ESTE DOCUMENTO</td>
+                <td class="td-strong">data-></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="3">DESIGNACIÓN CATASTRAL No.</td>
+                <td class="td-strong">data->desti</td>
+                <td class="td-strong">LIBRO No.</td>
+                <td class="td-strong">data->libro</td>
+                <td class="td-strong">FOLIO No.</td>
+                <td class="td-strong">data->foli</td>
+                <td class="td-strong">ORIGEN DE PROPIEDAD</td>
+                <td class="td-strong">data-></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="9">COORDENADAS GEOREFERENCIADAS DE LA UBICACIÓN DEL INMUEBLe</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">LUGAR:</td>
+                <td class="td-strong" colspan="2">data->lugar</td>
+                <td class="td-strong" colspan="2">COORDENADAS</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data->geo</td>
+                <td class="td-strong">LAT(N) </td>
+                <td class="td-strong">data->lat</td>
+                <td class="td-strong">NORTE</td>
+            </tr>
+            <tr>
+                <td class="td-strong">SECCIÓN:</td>
+                <td class="td-strong" colspan="2">data-></td>
+                <td class="td-strong" colspan="2">(GOOGLE MAPS) GSC</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data->geo</td>
+                <td class="td-strong">long(N)</td>
+                <td class="td-strong">data->lat</td>
+                <td class="td-strong">ESTE</td>
+            </tr>
+            <tr>
+                <td class="td-strong">SOLAR No.</td>
+                <td class="td-strong">data-></td>
+                <td class="td-strong">MANZANA</td>
+                <td class="td-strong">data-></td>
+                <td class="td-strong">PARCELA No.</td>
+                <td class="td-strong">data-></td>
+                <td class="td-strong">DISTRITO CATASTRAL</td>
+                <td class="td-strong">data-></td>
+            </tr>
+            <tr>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="3">GRAVAMEN REGISTRADO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="3">LEY No. 339 DERECHO BIEN FAMILIAR</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">data->ley</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="3">OBSERVACIONES LEGALES</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="5">data->obse</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="3">DESCRIPCIÓN GRAVAMEN</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="5">data->descr</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="3">ACTO DE VENTA/TRASPASO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="3">INFORMACION CATASTRAL</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="5">data->info</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong-espe" colspan="5">3. -CARACTERISTICAS DEL SECTOR</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="4">CARACTERISTICAS URBANAS DE LA ZONA Y ENTORNO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="4">SERVICIOS BÁSICOS QUE POSEE LA ZONA </td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">NIVEL SOCIOECONOMICO</td>
+                <td class="td-strong" colspan="2">Flujo del transito vehicular por la zona</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">MODERADO</td>
+            </tr>
+        </table>
+        <table class="wd100">
+            <tr>
+                <td class="td-strong">Sistema alumbrado eléctrico</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Calle pavimentadas de hormigón asfáltico</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Alta</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Interés por el sector o entorno</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Aceras y contenes</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Sistema de tratamientos aguas residuales</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Media Alta</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Vendibilidad relativa de las propiedades</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Sistema de agua potable</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Sistema sanitario por filtrantes</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Media</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Demanda de los solares por la zona</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Transporte público urbano</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Sistema de alcantarillado pluvial</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Media Baja</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Calidad urbana del sector o entorno</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Servicios vial del metro</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Teléfono y televisión por cable</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Baja</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Tasa de crecimiento sector</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">El valor de la propiedad por zona</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="2">TIPO DE VECINDARIO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">DESARROLLO MEDIO DEL SECTOR</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">LOCALIDAD TIPO POR LA ZONA</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">% Estimado de construcción</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Residencial</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Crecimiento ó Integración</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Naturaleza Urbana</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Solares en ofertas para su venta por la zona</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr class="wd100">
+                <td class="td-strong">Mixto</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Cambio de uso</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Naturaleza Sub-Urbana</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Desarrollo ecónomico de la zona</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Industrial</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Desintegración</td>
+                <td class="td-strong">date</td>
+                <td class="td-strong">Naturaleza Rural</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Nivel estacionamiento adecuado por la zona</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Agricola</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Decadencia</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Naturaleza Sub-Urbana</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Historial o Riesgos de inundaciones</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Turistíco</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Condominio nuevo</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Naturaleza Montañosa</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Indice plusvalia de las edificaciones</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Colonial</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Tipo o Modelo de condominio</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Areas verdes y instalaciones deportivas</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Barrio Populoso</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Sentido o dirección del transito</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">DISTANCIAS DESDE EL INMUEBLE A:</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Niveles de renta basica del entorno</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Escuelas</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">m.l.</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Protección urbanistica historica</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Bancos</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">m.l.</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Calidad constructiva del sujeto</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Hospitales</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">m.l.</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Naturaleza Sub-Urbana</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Tipo de construcción predominante</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Comercios</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">m.l.</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Factores desfavorables del sector</td>
+                <td class="td-strong">data </td>
+            </tr>
+            <tr>
+                <td class="td-strong-espe" colspan="3">4.- CARACTERISTICAS DEL INMUEBLE</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">AREA DE CONSTRUCCIÓN</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">FILTRACIONES VISIBLES</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="3">Condiciones fisicas de la carperta</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="2">FORMA SOLAR DEL EDIFICIO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">TIPO DE SUELO</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong-espe" colspan="3">4-B.- CAMINOS O ACCESOS PRINCIPALES</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">CONDICIONES FÍSICAS</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">SOLAR DE ESQUINA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Avenidas Principales </td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Calle y Caminos Terciarias</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Avenidas Secundarias</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Calle ó Avenidas Marginales</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">TOPOGRAFIA DEL SOLAR :</td>
+                <td class="td-strong" colspan="2">ORIENTACIÓN GEOGRAFÍCA</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">ESTILO DE CONSTRUCCIÓN</td>
+                <td class="td-strong-espe" colspan="4">4-C.- MAYOR Y MEJOR USO PRODUCTIVO DEL TERRENO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">Suave</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">CAÑADAS/DEPRESIONES</td>
+                <td class="td-strong">SISTEMA </td>
+                <td class="td-strong">Zona Residencial</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Zona Industrial</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Medio Accidentada</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Zona Comercial</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Zona Franca Industrial</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Accidentado</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">TIPO DE DEPRECIACIÓN</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Zona Agricola</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Zona Eco-Turística</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Nivel rasante calle</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">LENTA</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Zona Turística</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Vacacional / Recreación</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong-espe" colspan="3">4-A.- DATOS ESTADISTICOS DEL CONDOMINIO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="2">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="4">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+        </table>
+    </table>
+    <p class="pie-pagina">Pagina 9</p>
+    <!-- FIN DE PAGINA 9 -->
+    <div style="page-break-after:always;"></div>
+    <!-- INICIO PAGINA 10 -->
+    <table class="table-main">
+        <table class="wd100">
+            <tr>
+                <td class="td-strong-espe" colspan="3">5.-TIPO O MODELO DE EDIFICACIÓN A EVALUAR</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong-espe" colspan="5">OBSERVACIONES ENCONTRADAS DEL TASADOR</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">Cantidad de Niveles</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Local comercial (Tienda)</td>
+                <td class="td-strong">Clínica</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Cantidad de apartamentos</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Local comercial (Tienda)</td>
+                <td class="td-strong">Hotel</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Nivel bajo rasante/Semi-sotano</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Apartamento tipo Pent-House</td>
+                <td class="td-strong">Otro</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Apartamento</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">Local comercial para oficina</td>
+                <td class="td-strong">En otro especifique</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong-espe" colspan="2">6.- CALIDAD DE LOS MATERIALES UTILIZADOS PARA LA TERMINACIÓN
+                </td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong-espe" colspan="2">6-A.- RANGO DE DENSIDADES NETA PERMITIDAS ACTUAL</td>
+                <td class="td-strong"></td>
+                <td class="td-strong-espe" colspan="2">6-B.- DISTRIBUCIÓN ARQUITECTONICA</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+        </table>
+        <table class="wd100">
+            <tr>
+                <td class="td-strong">Lujo</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Calidad de primera</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Media</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Alta</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Media-Alta</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Muy Buena</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Regular</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">Calidad Alta</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Calidad Buena</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Económica</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Media</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Baja</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Buena</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">Mala</td>
+                <td class="td-strong">data</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td class="td-strong-espe" colspan="3">7.- INFORMACIÓN DEL ENTORNO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong" colspan="9">OFERTAS DE VENTAS X LA ZONA DEMANDA DE COMPRA COMPARACIÓN DE LAS
+                    PROPIEDADES</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="3">ZONIFICACIÓN</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">RETIROS DE LOS LINDEROS Mts.</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">MUCHAS</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">ALTA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">MUY SUPERIOR</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="5">CANTIDAD MÁX NIVELES</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">ZONIFICACIÓN</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">ALGUNAS</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">BUENA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">SUPERIOR</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="5">ALTURA MÁXIMA PERMITIDO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">FRONTAL</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">POCAS</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">REGULAR</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">SIMILAR</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="5">USO DEL SUELO PERMITIDO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">LATERALES</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">NINGUNAS</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">BAJA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">INFERIOR</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="5">BARRIO PRÓXIMO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">TRASERO</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">MUY INFERIOR</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="7">PLANTEAMIENTOS URBANISTICO A LAS NORMAS AYUNTAMIENTO CORRESPONDIENTE
+                </td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong-espe" colspan="6">8.- TIPOLOGIA CONSTRUCTIVA O MATERIALES DE TERMINACIÓN DEL
+                    INTERIOR Y EXTERIOR DEL SUJETO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="6">ADECUACIÓN A LAS NORMAS VIGENTES DEL AYUNTAMIENTO CORRESPONDIENTE</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+        </table>
+        <table class="wd100">
+            <tr>
+                <td class="td-strong">PISOS DEL INTERIOR</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">TIPO DE PAÑETE EN MUROS</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">PLAFONES INSTALADOS</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <!---->
+            <tr>
+                <td class="td-strong">ZOCALOS INTERIORES</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">TIPO DE PAÑETE EN TECHO</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">TERMINACIÓN DE TECHO</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS PARQUEOS</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">HUELLAS DE LA ESCALERA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">VENTANAS INSTALADAS</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">GABINETES COCINA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">ZOCALOS DE LA ESCALERA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">REVESTIMIENTOS EN</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">TIRADORES GABINETES</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">PUERTAS PRINCIPALES</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">PASAMANOS ESCALERA</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">TOPE DE COCINA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">PUERTAS DE LOS INTERIORES</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">CORTINA DE BAÑOS</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">FREGADERO</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">PUERTAS DE LOS CLOSETS</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">SISTEMA ELÉCTRICO</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">CONSTRUCCIÓN DE MUROS</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">CLOSET TERMINADOS EN</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">CAJA DE BREAKER MARCA</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">EDAD REMANENTE ECONOMICA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">EDAD EFECTIVA DEL INMUEBLE</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">VIDA ECONOMICA DEL INMUEBLE</td>
+                <td class="td-strong">data</td>
+            </tr>
+        </table>
+        <table class="wd100">
+            <tr>
+                <td class="td-strong" colspan="2">ENTRADA Y SALIDA DE MARQUESINA</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">INSTALACIONES ELECTRICAS EXTERIOR</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">CIA. SUPLIDORA DE LA ENERGIA ELÉCTRICA X LA ZONA </td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">MATERIALES DE CONSTRUCCIÓN</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PRIVADA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">SOSTERRADA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">Monofásica 110 </td>
+                <td class="td-strong"></td>
+                <td class="td-strong">COLUMNAS ESTRUCTURA</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">COMÚN</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">AEREA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">CONDOMINIIO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"> COLUMNAS ESTRUCTURA</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">NINGUNA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">EMPOTRADAS</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">VIGAS DE ESTRUCTURA</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">ÚNICA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">IMPERMEABILIZANTE DE TECHO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="3">VIGAS Y COLUMNAS DE HORMIGÓN ARMADO </td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">DOBLE</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="4">IMPERMEABILIZANTE ASFALTICO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">ADECUADA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">TELA ASFÁLTICA (GRAVILLADA)</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">FORMALETAS VACIADOS</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">PAVIMENTADA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">PINTURA ACRILICA </td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">ZAPATA DE CIMENTACION DE LOS MUROS</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">EN RETROCESO</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">MEMBRANA LIQUIDA</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">TECHO ALIGERADO DE FORMA HORIZONTAL</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+            </tr>
+        </table>
+        <table class="wd100">
+            <tr>
+                <td class="td-strong" colspan="2">MATERIAL DE TERMINACIÓN DE LOS TECHOS</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">CONDICIÓN GENERAL EXTERNA</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">MANTENIMIENTO GENERAL DEL CONDOMINIO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">REVESTIMIENTO DE LOS EXTERIORES DEL INMUEBLE</td>
+                <td class="td-strong"></td>
+            </tr>
+        </table>
+        <table class="wd100">
+            <tr>
+                <td class="td-strong">TEJA ASFÁLTICA (TIPO)</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">NUEVO</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">BUENO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">PAÑETE </td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">PINTURA </td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">TEJA DE BARRO (TIPO)</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">EXCELENTE</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">COSTO DEL MANTEMIENTO DEL CONDOMINIO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">LADRILLO DE BARRO</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">ALUMINIO</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">CUBIERTA METÁLICA O ALUZINC</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">MUY BUENA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong" colspan="2">AJUSTADO AL MERCADO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">PIEDRA / LAJA NATURALES</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">LAMINA VINILO</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong">LOSA DE HORMIGÓN ARMADO</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">BUENA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">BLOQUES DECORATIVOS AISLANTE</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">ROCA CORALINA</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong"> SHINGLES DE CEDRO</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">REGULAR</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="2">LAMINAS DE ALUCOBOND</td>
+                <td class="td-strong"></td>
+                <td class="td-strong">data</td>
+                <td class="td-strong">CERAMICA</td>
+                <td class="td-strong">data</td>
+            </tr>
+            <tr>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong">MALA</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+        </table>
+        <table class="wd100">
+            <tr>
+                <td class="td-strong-espe" colspan="3"> 9.-DISTRIBUCION DE LOS AMBIENTES DE LOS INTERIORES DEL SUJETO A EVALUAR</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong" colspan="5">AMENIDADES DE LAS AREAS COMUNES O DE USO EXCLUSIVO</td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+                <td class="td-strong"></td>
+            </tr>
+        </table>
+        <table class="wd100" style="border-spacing: 0px">
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong">CADA APART.</td>
+                <td class="td-strong">2 nivel</td>
+                <td class="td-strong">3 nivel</td>
+                <td class="td-strong">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+            <tr>
+                <td class="td-strong">PISOS O NIVELES</td>
+                <td class="td-strong-border">CADA APART.</td>
+                <td class="td-strong-border">2 nivel</td>
+                <td class="td-strong-border">3 nivel</td>
+                <td class="td-strong-border">OTROS NIVELES</td>
+                <td class="td-strong">ASCENSORES MODELO Y CAPACIDAD</td>
+                <td class="td-strong">data</td>
+                <td class="td-strong"></td>
+            </tr>
+        </table>
+    </table>
+    <p class="pie-pagina">Pagina 10</p>
+</body>
+
+</html>

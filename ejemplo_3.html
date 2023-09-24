@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorar</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+        .salto {
+            page-break-after: always;
+        }
+
+        .wd100 {
+            width: 100%
+        }
+
+        .wd70 {
+            width: 70%
+        }
+
+        h4 {
+            margin-left: 55px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .img-valorar {
+            object-fit: cover;
+            height: 90px;
+            width: 100px;
+            margin: 0px;
+        }
+
+        .text-center,
+        .img-title {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+
+        .table-main {
+            border: 2px solid black;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .table-main-two {
+            border: 2px solid black;
+            width: 100%;
+            height: auto;
+        }
+
+        .td-main-tb-one {
+            width: 60%;
+            margin: 0;
+        }
+
+        .table-two {
+            width: 100%;
+
+        }
+
+        .td-main-tb-two {
+            width: 40%;
+            padding: 20px 0px 75px 0px;
+
+        }
+
+        .td-strong-title {
+            width: 100px;
+            text-align: right;
+            font-weight: bold;
+            margin: 25px;
+        }
+
+        .sub-title {
+            text-decoration: underline;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        td {
+            font-size: 12px;
+        }
+
+        table tbody tr .td-strong {
+            width: 120px;
+            text-align: right;
+            font-weight: bold;
+            margin: 0px;
+        }
+
+
+        footer {
+            position: fixed;
+            bottom: 0px;
+            left: -45px;
+            right: 0px;
+            height: 50px;
+
+            /** Extra personal styles **/
+            /* text-align: left; */
+
+        }
+
+        .img-valorar-footer {
+            height: 110px;
+        }
+
+        .table-main-sub-one,
+        .table-sub-two {
+            width: 100%;
+            height: auto;
+        }
+
+        .td-strong-4w {
+            width: 150px;
+            font-weight: 900;
+            text-align: right;
+        }
+
+
+
+        .td-strong-sub-table-two {
+            font-weight: 900;
+        }
+
+        .td-strong-page-3 {
+            float: right;
+            font-weight: 900;
+            width: 300px;
+        }
+
+        .td-strong-sub-table-there {
+            float: right;
+            width: 150px;
+            border: 1px solid black;
+            text-align: center;
+            height: 15px;
+        }
+
+        .td-strong-sub-table-there-right {
+            float: right;
+            width: 150px;
+            border: 1px solid black;
+            text-align: right;
+            height: 15px;
+        }
+
+        .td-data {
+            float: left;
+            margin: 0;
+        }
+
+        .table-end-page-one {
+            width: 200px;
+            margin: 0 0 0 100px;
+        }
+
+        .header {
+            margin-top: -55px;
+        }
+
+        /*DATOS*/
+        .table-datos {
+            border: hidden;
+            background-color: rgba(243, 243, 243, 0.521);
+            width: 100%;
+            margin: 0px;
+
+        }
+
+        .table-in-table {
+            background-color: rgba(243, 243, 243, 0.521);
+            width: 100%;
+            margin: 0px;
+
+        }
+
+        .table-in-table tr td p {
+            margin: 0px;
+            text-align: left;
+        }
+
+        .tbl-img {
+            height: 250px;
+        }
+
+        .bh {
+            border-top: hidden;
+            border-left: hidden;
+            border-right: hidden;
+            border-bottom: hidden;
+        }
+
+        .bh-t {
+            border-top: hidden;
+        }
+
+        .bh-l {
+            border-left: hidden;
+        }
+
+        .bh-r {
+            border-right: hidden;
+        }
+
+        .bh-b {
+            border-bottom: hidden;
+        }
+
+        .tbl-dato {
+            padding: 5px;
+            background-color: #FFFFFF;
+            color: #000000;
+            font-size: 8px;
+        }
+
+        .tbl-dato-azul {
+            padding: 5px;
+            background-color: #B4C6E7;
+            color: #000000;
+            font-size: 8px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <footer>
+        <img class="img-valorar-footer" src="img/LogoPieDePagina.jpg" alt="">
+    </footer>
+
+
+    <table class="header wd100">
+        <tbody>
+            <tr class="header">
+                <td class="wd70 text-center">
+                    <h4>INFORME DE AVALÚO COMERCIAL</h4>
+                </td>
+                <td class="img-title">
+                    <img class="img-valorar" src="img/Valorar.png" alt="imgvalorar" />
+                </td>
+            </tr>
+            <!-- <tr>
+                <td class="wd100 text-right" colspan="2">2022</td>
+            </tr> -->
+        </tbody>
+    </table>
+    <table class="tb-strong-title">
+        <tbody>
+            <tr class="tr-strong-title">
+                <td class="td-strong-title">Nombre Solicitante</td>
+                <td class="">{{ $empresa->nombre }}/
+                <td>
+            </tr>
+        </tbody>
+        <br />
+    </table>
+    <table class="table-main">
+        <tr>
+            <td class=" ">
+                <h2 class="sub-title">INFORMACIÓN BÁSICA</h2>
+                <!-- table one-->
+                <table class="table-one">
+                    <tbody>
+                        <tr>
+                            <td class="td-strong">Nombre Solicitante</td>
+                            <td>{{ $data->solicitante_nombres . ' ' . $data->solicitante_apellidos }}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Tipo Identificación</td>
+                            <td class="">{{ $data->tipo_documento }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Fecha Avalúo</td>
+                            <td class="">{{ $data->fecha_avaluo }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Departamento</td>
+                            <td class="">{{ $data->departamento }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Dirección</td>
+                            <td class="">{{ $data->direccion }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Conjunto/Edificio</td>
+                            <td class="">{{ $data->nombre_conjunto }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Consecutivo Entidad</td>
+                            <td class="">{{ $data->codigo }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Línea de vivienda</td>
+                            <td class="">{data-VIVIENDA}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Tipo</td>
+                            <td class="">{{ $data->inmueble_tipo_inmueble }}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Clase</td>
+                            <td class="">{{ $data->clase }}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Tipo Vivienda</td>
+                            <td class="">{{ $data->inmueble_tipo_inmueble }}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Tipo de Inmueble</td>
+                            <td class="">{{ $data->inmueble_tipo_inmueble }}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Ubicación</td>
+                            <td class="">{{ $data->ubicacion }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td class="td-main-tb-two">
+                <!-- table two-->
+                <table class="table-two">
+                    <tbody>
+                        <br />
+                        <br />
+                        <tr>
+                            <td class="td-strong-4w">Número de Identificación</td>
+                            <td class="">{{ $data->solicitante_documento }}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Fecha Corrección</td>
+                            <td class="">{{ $data->fecha_correccion }}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Sector</td>
+                            <td class="">{{ $data->municipio }}</td>
+                        </tr>
+                        <br />
+                        <br />
+                        <tr>
+                            <td class="td-strong">Ciudad</td>
+                            <td class="">{{ $data->municipio }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Barrio</td>
+                            <td class="">{{ $data->barrio }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Solicitud para</td>
+                            <td class="">{{ $data->tipo_avaluo }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Uso</td>
+                            <td class="">{{ $data->juridica_uso }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <table class="table-main-two">
+        <tr class="tr-sub-table-two">
+            <h2 class="sub-title">DESCRIPCIÓN DEL INMUEBLE</h2>
+            <table class="table-main-sub-one">
+                <tr>
+                    <td class="td-strong">Altura</td>
+                    <td class="td-data">{{ $data->irregularidad_altura }}</td>
+                    <td class="td-strong">Número de pisos</td>
+                    <td class="td-data">{{ $data->numero_pisos }}</td>
+                    <td class="td-strong">Número de Sótanos</td>
+                    <td class="td-data">{{ $data->numero_sotanos }}</td>
+
+                </tr>
+                <tr>
+                    <td class="td-strong">Año Construcción</td>
+                    <td class="">{{ $data->ano_construccion }}</td>
+                    <td class="td-strong">Vetustez (Años)</td>
+                    <td class="">{{ $data->vetustez }}</td>
+                    <td class="td-strong">Estado de Construcción</td>
+                    <td class="">{{ $data->estado_construccion }}</td>
+
+                </tr>
+                <tr>
+                    <td class="td-strong">Terminado</td>
+                    <td class="">{{ $data->terminada }}</td>
+                    <td class="td-strong">En obra</td>
+                    <td class="">{{ $data->en_obra }}</td>
+                    <td class="td-strong">Remodelado</td>
+                    <td class="">{{ $data->remodelado }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Estado Conservación</td>
+                    <td class="">{{ $data->estado_conservacion }}</td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                    <td class="td-strong">Avance de obra(%)</td>
+                    <td class="">{{ $data->en_obra }}</td>
+                </tr>
+            </table>
+        </tr>
+        <tr class="tr-sub-table-two">
+            <table class="table-main-sub-one">
+                <tr>
+                    <td class="td-strong">Baño Social</td>
+                    <td class="">{{ $data->banos_sociales_cantidad }}</td>
+                    <td class="td-strong">Baño Priv</td>
+                    <td class="">{{ $data->banos_privados_cantidad }}</td>
+                    <td class="td-strong">Local</td>
+                    <td class="">{{ $data->locales_cantidad }}</td>
+                    <td class="td-strong">Bodega</td>
+                    <td class="">{{ $data->bodegas_cantidad }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Total Garajes</td>
+                    <td class="">{{ $data->garajes_cantidad }}</td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                    <td class="td-strong">Cubierto</td>
+                    <td class="">{{ $data->garajes_cubiertos_cantidad }}</td>
+                    <td class="td-strong">Uso Exclusivo</td>
+                    <td class="">{{ $data->garajes_uso_exclusivo_cantidad }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Sencillo</td>
+                    <td class="">{{ $data->garajes_sencillo_cantidad }}</td>
+                    <td class="td-strong">Descubierto</td>
+                    <td class="">{{ $data->garajes_descubiertos_cantidad }}</td>
+                    <td class="td-strong">Privado</td>
+                    <td class="">{{ $data->garajes_privados_cantidad }}</td>
+                    <td class="td-strong">Doble</td>
+                    <td class="">{{ $data->garajes_dobles_cantidad }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Iluminación</td>
+                    <td class="">{{ $data->iluminacion }}</td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                    <td class="td-strong">Cocina</td>
+                    <td class="">{{ $data->estado_cocinas }}</td>
+                    <td class="td-strong">Terraza</td>
+                    <td class="">{{ $data->terrazas_cantidad }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Ventilación</td>
+                    <td class="">{{ $data->ventilacion }}</td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                    <td class="td-strong">Bahía Comunal</td>
+                    <td class="">{{ $data->bahia_comunal_cantidad }}</td>
+                    <td class="td-strong">Servidumbre</td>
+                    <td class="">{{ $data->servidumbre_cantidad }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Estudio</td>
+                    <td class="">{{ $data->estudios_cantidad }}</td>
+                    <td class="td-strong">Sala</td>
+                    <td class="">{{ $data->salas_cantidad }}</td>
+                    <td class="td-strong">Oficina</td>
+                    <td class="">{{ $data->oficinas_cantidad }}</td>
+                    <td class="td-strong">Jardín</td>
+                    <td class="">{{ $data->jardines_cantidad }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Comedor</td>
+                    <td class="">{{ $data->comedores_cantidad }}</td>
+                    <td class="td-strong">Estar Hab</td>
+                    <td class="">{{ $data->habitaciones_star_cantidad }}</td>
+                    <td class="td-strong">Baño Serv.</td>
+                    <td class="">{{ $data->banos_servicio_cantidad }}</td>
+                    <td class="td-strong">Balcón</td>
+                    <td class="">{{ $data->balcones_cantidad }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Habitaciones</td>
+                    <td class="">{{ $data->habitaciones_cantidad }}</td>
+                    <td class="td-strong">Cuarto Serv</td>
+                    <td class="">{{ $data->cuartos_servicio_cantidad }}</td>
+                    <td class="td-strong">Patio Int</td>
+                    <td class="">{{ $data->patio_interior_cantidad }}</td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Z. Verde Priv.</td>
+                    <td class="">{{ $data->zonas_verdes_cantidad }}</td>
+                    <td class="td-strong">Sometido a Prop. Hor.</td>
+                    <td class="">
+                        @if ($data->sometido == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    <td class="td-strong">Núm. Edificios/Casas</td>
+                    <td class="">{{ $data->numero_edificios }}</td>
+                    <td class="td-strong">Unid. Por Piso</td>
+                    <td class="">{{ $data->unidades_por_piso }}</td>
+                </tr>
+            </table>
+        </tr>
+        <tr class="tr-sub-table-two">
+            <table class="table-main-sub-one">
+                <tr>
+                    <td class="td-strong">Ubicación Inmueble</td>
+                    <td class="td-data">{{ $data->ubicacion_inmueble }}</td>
+                    <td class="td-strong">Conj. Cerrada</td>
+                    <td class="td-data">
+                        @if ($data->conjunto_cerrado == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    <td class="td-strong">Total Unidades</td>
+                    <td class="td-data">{{ $data->total_unidades }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Zon. Mat. Inmobiliaria</td>
+                    <td class="">{data-50N-}</td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong">M. Inmob. Principal 1</td>
+                    <td class="">{{ $data->m_inmob_ppal_1 }}</td>
+                    <td class="td-strong">M. Inmob. GJ 1</td>
+                    <td class="">{{ $data->m_inmob_gj_1 }}</td>
+                    <td class="td-strong">M. Inmob. GJ 4</td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong">M. Inmob. Principal 2</td>
+                    <td class="">{{ $data->m_inmob_ppal_2 }}</td>
+                    <td class="td-strong">M. Inmob. GJ 2</td>
+                    <td class="">{{ $data->m_inmob_gj_2 }}</td>
+                    <td class="td-strong">M. Inmob. DP 1</td>
+                    <td class="">{{ $data->m_inmob_dp_1 }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">M. Inmob. Principal 3</td>
+                    <td class{{ $data->m_inmob_ppal_3 }}td>
+                    <td class="td-strong">M. Inmob. GJ 3</td>
+                    <td class="">{{ $data->m_inmob_gj_3 }}</td>
+                    <td class="td-strong">M. Inmob. DP 2</td>
+                    <td class="td-data">{{ $data->m_inmob_dp_2 }}</td>
+                </tr>
+
+                <tr>
+                    <td class="td-strong">No. Escritura</td>
+                    <td class="td-data">{{ $data->numero_escritura }}</td>
+                    <td class="td-strong">Notaría</td>
+                    <td class="td-data">{{ $data->numero_notaria }}</td>
+                    <td class="td-strong">Ciudad</td>
+                    <td class="td-data">{{ $data->ciudad_notaria }}</td>
+
+                </tr>
+                <tr>
+                    <td class="td-strong" colspan=2>Fecha Expedición Escritura</td>
+                    <td class="td-data">{{ $data->expedicion_escritura }}</td>
+                    <td class="td-strong"></td>
+                    <td class="td-data"></td>
+                    <td class="td-strong"></td>
+                    <td class="td-data"></td>
+
+                </tr>
+            </table>
+        </tr>
+
+        </tr>
+    </table>
+    </tr>
+
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+
+
+    <!-- inicio header -->
+    <style>
+        .td-strong-two {
+            width: 130px;
+            text-align: right;
+            font-weight: bold;
+            margin: 0px;
+        }
+    </style>
+    <table class="table-main">
+        <tr>
+            <td class="td-main-tb-one">
+                <h2 class="sub-title">INFORMACIÓN SECTOR Y MERCADO</h2>
+                <!-- table one-->
+                <table class="table-main-sub-one">
+                    <!--<tr>
+                        <td class="td-strong">Z. Verde Priv.</td>
+                        <td class="">{data-SI}</td>
+                        <td class="td-strong">Sometido a Prop. Hor.</td>
+                        <td class="">{data-1}</td>
+                        <td class="td-strong">Núm. Edificios/Casas</td>
+                        <td class="">{data-30}</td>
+                        <td class="td-strong">Unid. Por Piso</td>
+                        <td class="">{data-4}</td>
+                    </tr>-->
+                    <tr>
+                        <td class="td-strong">SERVICIOS PÚBLICOS</td>
+                        <td></td>
+                        <td class="td-strong">SO PREDOMINANTE BARRIO</td>
+                        <td class=""></td>
+                        <td class="td-strong">VÌAS DE ACCESO</td>
+                        <td class=""></td>
+                        <td class="td-strong">AMOBLAMIENTO URBANO</td>
+                        <td class=""></td>
+                    </tr>
+                </table>
+                <!--TABLE TWO-->
+
+                <table class="table-main-sub-one">
+                    <tr>
+                        <td class="td-strong-sub-table-two"></td>
+                        <td class="td-data">Sector</td>
+                        <td class="td-strong-sub-table-two">Predio</td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two"></td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two"></td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two"></td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two"></td>
+                        <td class="td-data"></td>
+                    </tr>
+                    <tr>
+                        <td class="td-strong-sub-table-two">Acueducto</td>
+                        <td class="td-data">{{ $data->sector_acueducto }}</td>
+                        <td class="td-strong-sub-table-two">{{ $data->predio_acueducto }}</td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two">Industria</td>
+                        <td class="td-data">{{ $data->industrial }}</td>
+                        <td class="td-strong-sub-table-two">Estado</td>
+                        <td class="td-data"> {{ $data->estado_vias }}</td>
+                        <td class="td-strong-sub-table-two">Parques</td>
+                        <td class="td-data">{{ $data->parques }}</td>
+                        <td class="td-strong-sub-table-two">Arborización</td>
+                        <td class="td-data">{{ $data->arborizacion_am }}</td>
+                    </tr>
+                    <tr>
+                        <td class="td-strong-sub-table-two">Alcantarillado</td>
+                        <td class="td-data">{{ $data->sector_alcantarillado }}</td>
+                        <td class="td-strong-sub-table-two">{{ $data->predio_alcantarillado }}</td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two">Vivienda</td>
+                        <td class="td-data">{{ $data->vivienda }}</td>
+                        <td class="td-strong-sub-table-two">Pavimentada</td>
+                        <td class="td-data">
+                            @if ($data->pavimentada == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                        <td class="td-strong-sub-table-two">Paradero</td>
+                        <td class="td-data">{{ $data->paradero }}</td>
+                        <td class="td-strong-sub-table-two">Alamedas</td>
+                        <td class="td-data">{{ $data->alamedas }}</td>
+                    </tr>
+                    <tr>
+                        <td class="td-strong-sub-table-two">E. Eléctrica</td>
+                        <td class="td-data">{{ $data->sector_energia_electrica }}</td>
+                        <td class="td-strong-sub-table-two">{{ $data->predio_energia_electrica }}</td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two">Comercio</td>
+                        <td class="td-data">{{ $data->comercio }}</td>
+                        <td class="td-strong-sub-table-two">Sardineles</td>
+                        <td class="td-data">{{ $data->sardineles }}</td>
+                        <td class="td-strong-sub-table-two">Alumbrado</td>
+                        <td class="td-data">{{ $data->alumbrado }}</td>
+                        <td class="td-strong-sub-table-two">Z. Verdes</td>
+                        <td class="td-data">{{ $data->verdes }}</td>
+                    </tr>
+                    <tr>
+                        <td class="td-strong-sub-table-two">Gas Natural</td>
+                        <td class="td-data">{{ $data->sector_gas }}</td>
+                        <td class="td-strong-sub-table-two">{{ $data->predio_gas }}</td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two">Otro</td>
+                        <td class="td-data">{data-No}</td>
+                        <td class="td-strong-sub-table-two">Andenes</td>
+                        <td class="td-data">{{ $data->andenes }}</td>
+                        <td class="td-strong-sub-table-two">Ciclo rutas</td>
+                        <td class="td-data">{{ $data->ciclo_rutas }}</td>
+                        <td class="td-strong-sub-table-two"></td>
+                        <td class="td-data"></td>
+                    </tr>
+                    <tr>
+                        <td class="td-strong-sub-table-two">Telefonía</td>
+                        <td class="td-data">{{ $data->sector_telefonia }}</td>
+                        <td class="td-strong-sub-table-two">{{ $data->predio_telefonia }}</td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two"></td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two"></td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two"></td>
+                        <td class="td-data"></td>
+                        <td class="td-strong-sub-table-two"></td>
+                        <td class="td-data"></td>
+                    </tr>
+                </table>
+                <h3>Perspectivas de Valorización</h3>
+                <p>{{ $data->perspectivas_valorizacion }}</p>
+                <br />
+                <h3>Actualidad Edificadora
+                </h3>
+                <p>{{ $data->actualidad_edificadora }}
+                </p>
+                <br />
+                <h3>Comportamiento Oferta y Demanda
+                </h3>
+                <p>{{ $data->comportamiento_oferta }}</p>
+                <br />
+                <br />
+                <style>
+                    .td-strong-two {
+                        width: 310px;
+                        font-weight: bold;
+                        margin-left: 40px;
+                    }
+                </style>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="td-strong-two">Tiempo Esperado Comercialización (En meses)</td>
+                            <td>{{ $data->tiempo_esperado_oferta }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </tr>
+    </table>
+
+    <style>
+        .table-main-medio {
+            margin-top: 4px;
+            border: 2px solid black;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <table class="table-main-medio">
+        <tr>
+            <td class="td-main-tb-one">
+                <h2 class="sub-title">DOTACIÓN COMUNAL</h2>
+                <!-- table one-->
+            </td>
+        </tr>
+        <tr>
+            <table class="table-sub-two">
+                <tr>
+                    <td class="td-strong">Portería</td>
+                    <td class="">{{ $data->porteria }}</td>
+                    <td class="td-strong">Salón Comunal </td>
+                    <td class="">{{ $data->salon_comunal }}</td>
+                    <td class="td-strong">Aire Acond. Central</td>
+                    <td class="">{{ $data->aire_ac_entral }}</td>
+                    <td class="td-strong">Club house</td>
+                    <td class="">{{ $data->club_house }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Juego Niños</td>
+                    <td class="">{{ $data->juego_ninos }}</td>
+                    <td class="td-strong">Bicicletero</td>
+                    <td class="">{{ $data->bicicletero }}</td>
+                    <td class="td-strong">Eq. Presión Cons</td>
+                    <td class="">{{ $data->eq_presion_const }}</td>
+                    <td class="td-strong">Z. Verdes</td>
+                    <td class="">{{ $data->zonas_verdes }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Citófono</td>
+                    <td class="">{{ $data->citofono }}</td>
+                    <td class="td-strong">Bomba Eyectora</td>
+                    <td class="">{{ $data->bomba_eyectora }}</td>
+                    <td class="td-strong">Tanque Agua</td>
+                    <td class="">{{ $data->tanque_agua }}</td>
+                    <td class="td-strong">Gj. Visitantes</td>
+                    <td class="">{{ $data->gj_visitantes }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Cancha Mult.</td>
+                    <td class="">{{ $data->cancha_multif }}</td>
+                    <td class="td-strong">Shut Basuras</td>
+                    <td class="">{{ $data->shut_basuras }}</td>
+                    <td class="td-strong">Cancha Squash</td>
+                    <td class="">{{ $data->cancha_squash }}</td>
+                    <td class="td-strong">Gimnasio</td>
+                    <td class="">{{ $data->gimnasio }}</td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Golfito</td>
+                    <td class="">{{ $data->golfito }}</td>
+                    <td class="td-strong">Piscina</td>
+                    <td class="">{{ $data->piscina }}</td>
+                    <td class="td-strong">Planta Elect</td>
+                    <td class="">{{ $data->planta_electrica }}</td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Ascensor</td>
+                    <td class="">{{ $data->ascensor }}</td>
+                    <td class="td-strong">Núm. Ascens.</td>
+                    <td class="">{{ $data->cantidad_ascensores }}</td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong">Otros</td>
+                    <td class="">{{ $data->otros }}</td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                    <td class="td-strong"></td>
+                    <td class=""></td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+    <table class="table-main-medio">
+        <tr>
+            <td class="td-main-tb-one">
+                <h2 class="sub-title">NORMATIVIDAD</h2>
+                <!-- table one-->
+            </td>
+        </tr>
+        <tr>
+            <table class="table-sub-two">
+                <tr>
+                    <td class="td-strong-sub-table-two">TermNorma Uso (¿Cumple?)inado</td>
+                    <td class="">
+                        @if ($data->norma_uso == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    </td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Usos</td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Permitidos</td>
+                    <td class="">{{ $data->norma_usos_permitidos }}</td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Condicionados</td>
+                    <td class="">{{ $data->norma_usos_condicionados }}</td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">No permitidos</td>
+                    <td class="">{{ $data->norma_usos_no_permitidos }}</td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">NORMA EDIFICABILIDAD (¿cumple?)</td>
+
+                    <td class="">
+                        @if ($data->norma_edificadora == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    </td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Indice de Ocupación</td>
+                    <td class="">
+                        @if ($data->norma_indice_ocupacion == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    <td class="td-strong-sub-table-two">Índice de Construcción</td>
+                    <td class="">
+                        @if ($data->norma_indice_construccion == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Aislamientos</td>
+                    <td class="">
+                        @if ($data->norma_aislamientos == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>{data-N/A}</td>
+                    <td class="td-strong-sub-table-two">Antejardín</td>
+                    <td class="">
+                        @if ($data->norma_antejardin == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    </td>
+                    <td class="td-strong-sub-table-two">Altura</td>
+                    <td class="">
+                        @if ($data->norma_altura == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Licencia</td>
+                    <td class="">
+                        @if ($data->norma_licencia == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Zona de Amenaza (inundación, remoción, orden público,baja mar)
+                    </td>
+                    <td class="">
+                        @if ($data->norma_zona_amenaza == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Zona de Reserva (conservación, patrimonio histórico o
+                        Protección
+                        Ambiental) </td>
+                    <td class="">
+                        @if ($data->norma_zona_reserva == 0)
+                            NO
+                        @else
+                            SI
+                        @endif
+                    </td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                    <td class="td-strong-sub-table-two"></td>
+                    <td class=""></td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+
+    <!---  INICIO PAGE 3-->
+    <table class="table-main-medio">
+        <tr>
+            <td class="td-main-tb-one">
+                <h2 class="sub-title">OBSERVACIONES</h2>
+                <!-- table one-->
+            </td>
+        </tr>
+        <tr>
+            <table class="table-sub-two">
+                <tr>
+                    <td class="td-strong-sub-table-two">Observación Habitabilidad:</td>
+                    <td class="">{{ $data->observaciones_generales }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Obbservación Edificabilidad:</td>
+                    <td class="">{{ $data->actualidad_edificadora }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Observación Uso Inmueble:</td>
+                    <td class="">{{ $data->descripcion_inmueble }}
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Observación Riesgos Amenazas:</td>
+                    <td class="">No aplica.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-two">Otras Observaciones:</td>
+                    <td class="">Certificado de tradición y libertad con matrícula inmobiliaria No. 50N-20100288
+                        y No.
+                        50N-20100268
+                        impresos el 13 de junio de 2022 y escritura pública No. 1095 del 11 de junio de 2014 otorgada en
+                        la notaría
+                        No. 34 de Bogotá
+                    </td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+    <table class="table-main-medio">
+        <tr>
+            <td class="td-main-tb-one">
+                <h2 class="sub-title">LIQUIDACIÓN AVALÚO</h2>
+                <!-- table two-->
+            </td>
+        </tr>
+        <tr>
+            <table class="table-sub-two">
+                <tr>
+                    <td class="td-strong-sub-table-two">DESCRIPCIÓN</td>
+                    <td class="">
+                    <td class="td-strong-sub-table-two">AREA (M2)</td>
+                    <td class="">
+                    <td class="td-strong-sub-table-two">VALOR UNITARIO (M2)</td>
+                    <td class="">
+                    <td class="td-strong-sub-table-two">VALOR TOTAL</td>
+                    <td class="">
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-there">AREA PRIVADA</td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there">{{ number_format($data->area_privada, 2, ',', '.') }}</td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there-right">
+                        {{ '$' . number_format($data->valor_total_area_privada / $data->area_privada, 0, ',', '.') }}
+                    </td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there-right ">
+                        {{ '$' . number_format($data->valor_total_area_privada, 0, ',', '.') }}</td>
+                    <td class="">
+                </tr>
+                <tr>
+                    @if ($data->otras_areas_privadas > 0)
+                        <td class="td-strong-sub-table-there">OTRAS AREAS PRIVADAS</td>
+                        <td class="">
+                        <td class="td-strong-sub-table-there">{{ $data->otras_areas_privadas }}</td>
+                        <td class="">
+                        <td class="td-strong-sub-table-there-right">
+                            {{ '$' . number_format($data->valor_total_otras_areas_privadas / $data->otras_areas_privadas, 0, ',', '.') }}
+                        </td>
+                        <td class="">
+                        <td class="td-strong-sub-table-there-right">
+                            {{ '$' . number_format($data->valor_total_otras_areas_privadas, 0, ',', '.') }}</td>
+                        <td class="">
+                    @endif
+                </tr>
+                <tr>
+                    @if ($data->area_parqueadero_privado > 0)
+                        <td class="td-strong-sub-table-there">GARAJE</td>
+                        <td class="">
+                        <td class="td-strong-sub-table-there">{{ $data->area_parqueadero_privado }}</td>
+                        <td class="">
+                        <td class="td-strong-sub-table-there-right">
+                            {{ '$' . number_format($data->valor_parqueadero / $data->area_parqueadero_privado, 0, ',', '.') }}
+                        </td>
+                        <td class="">
+                        <td class="td-strong-sub-table-there-right">
+                            {{ '$' . number_format($data->valor_parqueadero, 0, ',', '.') }}</td>
+                        <td class="">
+                    @endif
+                </tr>
+                <tr>
+                    @if ($data->area_deposito_privado > 0)
+                        <td class="td-strong-sub-table-there">DEPOSITO</td>
+                        <td class="">
+                        <td class="td-strong-sub-table-there">{{ $data->area_deposito_privado }}</td>
+                        <td class="">
+                        <td class="td-strong-sub-table-there-right">
+                            {{ '$' . number_format($data->valor_deposito / $data->area_deposito_privado, 0, ',', '.') }}
+                        </td>
+                        <td class="">
+                        <td class="td-strong-sub-table-there-right">
+                            {{ '$' . number_format($data->valor_deposito, 0, ',', '.') }}</td>
+                        <td class="">
+                    @endif
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there"></td>
+                    <td class="">
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-there-"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there-"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-two">Valor Total Avalúo</td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there-right">
+                        {{ '$' . number_format($data->valor_total_avaluo, 0, ',', '.') }}</td>
+                    <td class="">
+                </tr>
+                <tr>
+                    <td class="td-strong-sub-table-there-"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there-"></td>
+                    <td class="">
+                    <td class="td-strong-sub-table-two">Valor Asegurable</td>
+                    <td class="">
+                    <td class="td-strong-sub-table-there-right">
+                        {{ '$' . number_format($data->valor_asegurable, 0, ',', '.') }}</td>
+                    <td class="">
+                </tr>
+            </table>
+        </tr>
+
+    </table>
+    <table class="table-main-medio">
+        <tr>
+            <td class="td-main-tb-one">
+                <h2 class="sub-title">DICTAMEN</h2>
+                <!-- table two-->
+            </td>
+        </tr>
+        <style>
+            p,
+            h3 {
+                font-size: 12px;
+            }
+        </style>
+        <p>{{ $data->calificacion_garantia }}</p>
+        <br />
+        <h3>Observaciones Dictamen</h3>
+        <p>{{ $data->observaciones_dictamen }}
+        </p>
+        <br />
+        <tr>
+            <table>
+                <td class="td-strong-sub-table-two">aplica para:</td>
+                <td class="">{{ $data->tipo_avaluo }}</td>
+            </table>
+        </tr>
+    </table>
+    <style>
+        .tb-firma {
+            border-bottom: 1px solid black;
+        }
+    </style>
+    <table class="table-main-medio">
+        <tr>
+            <td class="">
+                <!-- table one-->
+                <table class="">
+                    <tbody>
+                        <tr>
+                            <td class="td-strong">Perito Avaluador</td>
+                            <td class="tb-firma">{{ $data->avaluador_designado }}</td>
+                        </tr>
+                        <tr>
+                            <td class="td-strong">CC / NIT</td>
+                            <td class="tb-firma">{data-1018490300}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Registro R.A.A</td>
+                            <td class="tb-firma">{data-1018490300}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Fecha</td>
+                            <td class="tb-firma">{{ $data->fecha_avaluo }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Representante Legal</td>
+                            <td class="tb-firma">{{ $empresa->representante_legal }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Identificacion</td>
+                            <td class="tb-firma">{{ $empresa->cedula }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong">Registro RAA</td>
+                            <td class="tb-firma">AVAL- {{ $empresa->cedula }}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="td-strong"></td>
+                            <td class="">Evaluos y tasaciones de Colombia Valorar S.A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td class="">
+                <!-- table two-->
+                <table class="">
+                    <tbody>
+                        <br />
+                        <br />
+                        <tr>
+                            <td class="tb-firma">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="">Firma</td>
+                        </tr>
+                        <table>
+                            <tr>
+                                <td>JUAN MANUEL</td>
+                                <td>firmado digitalmente</td>
+                            </tr>
+                            <tr>
+                                <td>VELASQUEZ</td>
+                                <td>Velasquez Correa</td>
+                            </tr>
+                            <tr>
+                                <td>CORREA</td>
+                                <td>Fecha 2022.06.22</td>
+                            </tr>
+                        </table>
+                        <tr>
+                            <td class="tb-firma"></td>
+                        </tr>
+                        <tr>
+                            <td>FIRMA DEL REPRESENTANTE LEGAL</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--Hoja Horizontal-->
+
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+
+    <style>
+        .img-valorar-photos {
+            float: left;
+            object-fit: cover;
+            height: 130px;
+            width: 160px;
+            margin: 0px;
+        }
+
+        .header-text {
+            border-bottom: 1px solid black;
+        }
+
+        .table-header-page-for {
+            border-bottom: 1px solid black;
+            margin-top: 115px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .td-header-page-for {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .table-photos-page-for {
+            width: 100%;
+            text-align: center;
+        }
+
+        .td-photos-page-for {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .title-photo {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+
+
+        .img-photos {
+            width: 160px;
+            height: 210px;
+            object-fit: contain;
+
+        }
+
+        .tb-photos {
+            width: 80%;
+        }
+
+        .td-image {
+            width: 180px;
+            height: 230px;
+            /* border: 1px solid black; */
+            margin: 0 25px;
+        }
+
+        .tr-photos {
+            text-align: center;
+            width: 160px;
+            height: 210px;
+        }
+
+        .tb-main-photo {
+            text-align: center;
+            width: 100%;
+            float: center;
+            margin: 0 0 0 70px;
+
+        }
+
+        .tr-main-photo {
+            text-align: center;
+            width: 100%;
+            margin: 0 90px;
+        }
+
+        .details-photo,
+        .tr-photos {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            max-width: 90px;
+            font-weight: 900;
+            margin: 0 70px;
+        }
+
+        .img-vista {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .div-img {
+            margin-top: 50px;
+            text-align: center;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+
+        .img-container {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+
+        .image-margin {
+            margin-top: 20px
+        }
+
+        .div-strong {
+            margin-top: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    <table class="header wd100">
+        <tbody>
+            <tr class="header">
+                <td class="img-title">
+                    <img class="img-valorar-photos" src="img/Valorar.png" alt="imgvalorar" />
+                </td>
+                <td class="">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table-header-page-for">
+        <tr>
+            <td></td>
+            <td class="td-header-page-for">{$data->codigo}</td>
+        </tr>
+    </table>
+
+
+    <!---table image-->
+    <h3 class="title-photo">ANEXO FOTOGRÁFICO</h3>
+    <div class="div-img">
+        @foreach ($documentos as $documento)
+                <div class="img-container" style="margin-top: 50px">
+                    <div class="image-margin" style="">
+                        <img class="img-vista" src="{{ $documento->url }}" alt="FotoAlt" title="">
+                        <div class="div-strong">
+                            <strong class="text-center">{{ $documento->nombre_imagen }}</strong>
+                        </div>
+                    </div>
+                </div>
+        @endforeach
+    </div>
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+
+
+    <!-- INICIO MAPA DE LOCALIZACION GENERAL-->
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd100">MAPA DE LOCALIZACION GENERAL</th>
+            </tr>
+        </thead>
+    </table>
+
+    <div class="mt-1"></div>
+    <table class="table-datos">
+        <tr>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        @if ($geolocalizacion_sector != null)
+                            <td class="tbl-img" colspan="2"><img class="tbl-img"
+                                    src="{{ $geolocalizacion_sector->url }}" alt="Mapa de geolocalizacion"></td>
+                        @else
+                            <td class="tbl-img" colspan="2">No se a cargado imagen</td>
+                        @endif
+                    </tr>
+                    <tr>
+                        <td class="tbl-dato wd50">COORDENADAS: {{ $data->latitud }} - {{ $data->longitud }}</td>
+                        <td class="tbl-dato">FUENTE: GOOGLE MAPS</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- FIN MAPA DE LOCALIZACION GENERAL-->
+
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+
+    <!-- inicio header -->
+    <table class="wd100">
+        <tbody>
+            <tr>
+                <td class="img-title" style="text-align: right;"><img class="img-valorar" src="img/Valorar.png"
+                        alt="imgvalorar" style="margin-right: 50px"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mt-1"></div>
+
+    <!-- INICIO NOTAS ADICIONALES -->
+    @php
+        // Obtener el contenido de CKEditor desde la base de datos (reemplaza esta línea con tu lógica para obtener el contenido)
+        $notObs = $data->notas_observaciones;
+        $docSum = $data->notas_documentos_suministrados;
+        $notFte = $data->notas_fuente_areas;
+        $notNor = $data->notas_normatividad;
+        
+        // Configurar HTML Purifier
+        $config = \HTMLPurifier_Config::createDefault();
+        $purifier = new \HTMLPurifier($config);
+        
+        // Limpiar el contenido HTML usando HTML Purifier
+        $purifier->purify($notObs);
+        $purifier->purify($docSum);
+        $purifier->purify($notFte);
+        $purifier->purify($notNor);
+        
+    @endphp
+    <style>
+        .content {
+            border: solid 1 #000000;
+        }
+
+        .bh {
+            border-top: hidden;
+            border-left: hidden;
+            border-right: hidden;
+            border-bottom: hidden;
+        }
+
+        .bh-t {
+            border-top: hidden;
+        }
+
+        .bh-l {
+            border-left: hidden;
+        }
+
+        .bh-r {
+            border-right: hidden;
+        }
+
+        .bh-b {
+            border-bottom: hidden;
+        }
+
+        .tbl-item thead th {
+            padding: 5px;
+            background-color: #0F145B;
+            color: #FFF;
+            font-size: 10px;
+        }
+
+        .tbl-dato {
+            padding: 5px;
+            background-color: #FFFFFF;
+            color: #000000;
+            font-size: 8px;
+        }
+    </style>
+    <div class="content">
+        <table class="bh wd100">
+            <thead>
+                <tr>
+                    <th class="wd100">NOTAS ADICIONALES</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="mt-1"></div>
+        <table class="tbl-item wd100">
+            <thead>
+                <tr>
+                    <th class="wd100">OBSERVACIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="">{!! $notObs !!}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mt-1"></div>
+        <table class="tbl-item wd100">
+            <thead>
+                <tr>
+                    <th class="wd100">DOCUMENTOS SUMINISTRADOS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tbl-dato">{!! $docSum !!}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mt-1"></div>
+        <table class="tbl-item wd100">
+            <thead>
+                <tr>
+                    <th class="wd100">FUENTE AREAS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tbl-dato">{!! $notFte !!}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mt-1"></div>
+        <table class="tbl-item wd100">
+            <thead>
+                <tr>
+                    <th class="wd100">NORMATIVIDAD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tbl-dato">{!! $notNor !!}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- FIN NOTAS ADICIONALES -->
+
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+    <style>
+        .main-description-end {
+            margin: 0 auto;
+            border: 2px solid black;
+            width: 80%;
+            height: auto;
+            margin-top: 100px;
+        }
+
+        .main-descriptio-sub-s {
+            border: 1px solid black;
+            width: 100%;
+            height: auto;
+            background-color: #B1B4BC;
+            margin: 0;
+        }
+
+        .title-notas-adition {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+        .title-notas-adition-sub {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 900;
+            background-color: #1F497D;
+            padding: 5px;
+            width: 100%;
+            margin: 0;
+            color: white;
+        }
+    </style>
+    <table class="header wd100">
+        <tbody>
+            <tr class="header">
+                <td class="img-title">
+                    <img class="img-valorar-photos" src="img/Valorar.png" alt="imgvalorar" />
+                </td>
+                <td class="">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <style>
+        .table2 {
+            margin: 0 auto;
+            width: 95%;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+
+        .th-1
+        {
+        width: 50%;
+        text-align: left;
+        height: 15px;
+        background: #1F497D;
+        color: white;
+        }
+
+        .td-table-one1 {
+            height: 15px;
+            width: 50%;
+            font-weight: 700;
+            color: black;
+            /* background: #0f145b; */
+            border: 1px solid black;
+            font-size: 8px;
+        }
+
+        .td-table-colspan {
+            text-align: center;
+            height: 15px;
+            width: 50%;
+            font-weight: 700;
+            color: black;
+            /* background: #0f145b; */
+            border: 1px solid black;
+            font-size: 8px;
+        }
+
+        .th-table-one {
+            font-size: 8px;
+        }
+
+        .th-none {
+            background-color: white;
+            width: 200px;
+            height: 15px;
+        }
+
+        .main-descriptio-sub-s {
+            border: 1px solid black;
+            width: 100%;
+            height: auto;
+            background-color: #B1B4BC;
+            margin-bottom: 25px;
+        }
+    </style>
+    <table class="main-description-end">
+        <h3 class="title-notas-adition">NOTAS ADICIONALES</h3>
+        <table class="tbl-item wd100">
+            <thead>
+                <tr>
+                    <th class="wd100">LOCALIZACION</th>
+                </tr>
+            </thead>
+        </table>
+
+        <table class="table2">
+            <tr>
+                <td colspan="2" class="td-table-one1 text-center">COORDENADAS</td>
+            </tr>
+            <tr>
+                <td class="td-table-one1">LONGITUD</td>
+                <td class="td-table-one1">{{ $data->longitud }}</td>
+            </tr>
+            <tr>
+                <td class="td-table-one1">LATITUD</td>
+                <td class="td-table-one1">{{ $data->latitud }}</td>
+            </tr>
+        </table>
+        <table class="wd100">
+            <tr class="text-center">
+                @if ($geolocalizacion_predio != null)
+                    <td class="tbl-img" colspan="2"><img class="tbl-img" src="{{ $geolocalizacion_predio->url }}"
+                            alt="Mapa de geolocalizacion"></td>
+                @else
+                    <td class="tbl-img" colspan="2">No se a cargado imagen</td>
+                @endif
+            </tr>
+        </table>
+        <table class="tbl-item wd100">
+            <thead>
+                <tr>
+                    <th class="wd100">FUENTE: GOOGLE MAPS</th>
+                </tr>
+            </thead>
+        </table>
+    </table>
+</body>
+
+</html>
+
+
+{{-- esto era lo que tenia Oscar para lo de notas adicionales --}}
+<!--<table class="main-descriptio-one">
+        <h3 class="title-notas-adition">NOTAS ADICIONALES</h3>
+        <table class="main-descriptio-sub">
+            <h3 class="title-notas-adition-sub">OBSERVACIONES</h3>
+            <ul>
+                <li> {{ $data->notas_observaciones }}
+                </li>
+            </ul>
+        </table>
+        <table class="main-descriptio-sub">
+            <h3 class="title-notas-adition-sub">DOCUMENTOS SUMINISTRADOS</h3>
+            <ul>
+                <li>{{ $data->notas_documentos_suministrados }}
+                </li>
+            </ul>
+        </table>
+        <table class="main-descriptio-sub">
+            <h3 class="title-notas-adition-sub">FUENTE AREAS</h3>
+            <ul>
+                <li> {{ $data->notas_fuente_areas }}
+                </li>
+            </ul>
+        </table>
+        <table class="main-descriptio-sub">
+            <h3 class="title-notas-adition-sub">NORMATIVIDAD</h3>
+            <ul>
+                <li> {{ $data->notas_normatividad }}
+                </li>
+                <li> Uso del inmueble: Residencial.
+                </li>
+            </ul>
+        </table>
+    </table>-->
+{{-- fin de lo que tenia Oscar --}}

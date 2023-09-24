@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    console.log("JUANDACAS DOCUMENT");
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #header {
+            border: 1px solid black;
+            position: fixed;
+            top: -2cm;
+            left: 0cm;
+        }
+
+        .imgHeader {
+            float: left;
+            width: 8cm;
+        }
+
+
+        .hijo {
+            width: 2cm;
+            height: 0.4cm;
+            margin: 0.2cm;
+            background-color: yellow;
+        }
+
+        .ligera {
+            font-family: "Monserrat";
+            font-weight: 100;
+        }
+
+        .normal {
+            font-family: "Monserrat";
+            font-weight: 400;
+        }
+
+        .bold {
+            font-family: "Monserrat";
+            font-weight: 700;
+        }
+
+        .pequena {
+            font-size: 15px;
+        }
+
+        .salto {
+            page-break-after: always;
+        }
+
+        .tbl-datos {
+
+            border-collapse: collapse;
+        }
+
+        .tbl-item thead th {
+            padding: 5px;
+            background-color: #0F145B;
+            color: #FFF;
+            font-size: 10px;
+        }
+
+        .tbl-item-gris thead th {
+            padding: 5px;
+            background-color: #B1B4BC;
+            color: #000000;
+            font-size: 10px;
+        }
+
+        .tbl-item-azul thead th {
+            padding: 5px;
+            background-color: #B4C6E7;
+            color: #000000;
+            font-size: 10px;
+        }
+
+        .tbl-nombre {
+            padding: 5px;
+            background-color: #B1B4BC;
+            color: #000000;
+            font-size: 8px;
+        }
+
+        .tbl-nombre_resalta {
+            padding: 5px;
+            background-color: #0F145B;
+            color: #FFF;
+            font-size: 8px;
+
+        }
+
+        .tbl-dato {
+            padding: 5px;
+            background-color: #FFFFFF;
+            color: #000000;
+            font-size: 8px;
+        }
+
+        .tbl-dato-azul {
+            padding: 5px;
+            background-color: #B4C6E7;
+            color: #000000;
+            font-size: 8px;
+
+        }
+
+
+
+        .wd10 {
+            width: 10%
+        }
+
+        .wd20 {
+            width: 20%
+        }
+
+        .wd25 {
+            width: 25%
+        }
+
+        .wd30 {
+            width: 30%
+        }
+
+        .wd40 {
+            width: 40%
+        }
+
+        .wd50 {
+            width: 50%
+        }
+
+        .wd60 {
+            width: 60%
+        }
+
+        .wd70 {
+            width: 70%
+        }
+
+        .wd80 {
+            width: 80%
+        }
+
+        .wd100 {
+            width: 100%
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        /*ESTILOS GRALES*/
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+        /*DATOS*/
+        .table-datos {
+            border: hidden;
+            background-color: rgba(243, 243, 243, 0.521);
+            width: 100%;
+            margin: 0px;
+
+        }
+
+        .table-in-table {
+            background-color: rgba(243, 243, 243, 0.521);
+            width: 100%;
+            margin: 0px;
+
+        }
+
+        .table-in-table tr td p {
+            margin: 0px;
+            text-align: left;
+        }
+
+        .tituloRec {
+            background-color: #B1B4BC;
+            color: #000000;
+
+        }
+
+        .text-area {
+            margin: 0px;
+            border: none;
+            font-size: 9px;
+        }
+
+        .img-title {
+            text-align: center;
+        }
+
+        .img-valorar {
+            object-fit: cover;
+            height: 60px;
+            width: 80px;
+        }
+
+        .m1 {
+            margin: 10px;
+        }
+
+        .mt-1 {
+            margin-top: 10px;
+        }
+
+        .ml-1 {
+            margin-left: 10px;
+        }
+
+        .p-1 {
+            padding: 0px 10px 0px 10px;
+        }
+
+        .pl-1 {
+            padding-left: 10px;
+        }
+
+        .bh {
+            border-top: hidden;
+            border-left: hidden;
+            border-right: hidden;
+            border-bottom: hidden;
+        }
+
+        .bh-t {
+            border-top: hidden;
+        }
+
+        .bh-l {
+            border-left: hidden;
+        }
+
+        .bh-r {
+            border-right: hidden;
+        }
+
+        .bh-b {
+            border-bottom: hidden;
+        }
+
+        .tbl-img {
+            height: 250px;
+        }
+
+        header {
+            position: fixed;
+            top: -60px;
+            left: 0px;
+            right: 0px;
+            height: 50px;
+
+            /** Extra personal styles **/
+            background-color: #03a9f4;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 15px;
+            left: 0px;
+            right: 0px;
+            height: 50px;
+
+            /** Extra personal styles **/
+            text-align: left;
+
+        }
+
+        .img-valorar-footer {
+            height: 110px;
+        }
+
+        .img-vista {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .div-img {
+            margin-top: 50px;
+            text-align: center;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+
+        .img-container {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+
+        .image-margin {
+            margin-top: 20px
+        }
+
+        .div-strong {
+            margin-top: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <img class="img-valorar-footer" src="img/LogoPieDePagina.jpg" alt="">
+    </footer>
+
+    <!-- inicio header -->
+    <table class="wd100">
+        <tbody>
+            <tr>
+                <td class="wd70 text-center">
+                    <h4>INFORME DE AVALÚO COMERCIAL</h4>
+                </td>
+                <td class="img-title"><img class="img-valorar" src="img/Valorar.png" alt="imgvalorar"></td>
+            </tr>
+            <tr>
+                <td class="wd100 text-right" colspan="2">2023</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- fin header -->
+
+    <!-- inicio INFORMACION GENERAL -->
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th>1. INFORMACIÓN GENERAL</th>
+            </tr>
+        </thead>
+    </table>
+    <table class="wd100">
+        <tbody>
+            <tr>
+                <td class="tbl-nombre">NOMBRE FIRMA AVALUADORA</td>
+                <td class="tbl-dato text-center wd80" colspan="5">{{ $empresa->nombre }}</td>
+            </tr>
+            <tr>
+                <td class="tbl-nombre wd25">CONSECUTIVO SIV</td>
+                <td class="tbl-dato text-center wd20">{{ $data->codigo_avaluo }}</td>
+                <td class="tbl-nombre_resalta text-center wd20">VALOR TOTAL DEL AVALÚO</td>
+                <td class="tbl-dato-azul text-center wd20">
+                    {{ '$' . number_format($data->valor_total_avaluo, 0, ',', '.') }}
+                </td>
+                <td class="tbl-nombre_resalta text-center wd20">VALOR ASEGURABLE</td>
+                <td class="tbl-dato-azul text-center wd20">
+                    {{ '$' . number_format($data->valor_asegurable, 0, ',', '.') }}
+                </td>
+            </tr>
+            <tr>
+                <td class="tbl-nombre_resalta text-center wd20">CALIFICACION DE GARANTIA</td>
+                <td class="tbl-dato-azul text-center wd20">{{ $data->calificacion_garantia }}</td>
+                <td class="tbl-nombre_resalta text-center wd20">TIPO DE VIVIENDA</td>
+                <td class="tbl-dato-azul text-center wd20">{{ $data->tipo_vivienda }}</td>
+                <td class="tbl-dato text-center wd20" colspan="2"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- fin INFORMACION GENERAL -->
+
+    <!-- inicio INFORMACION BASICA -->
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th>2. INFORMACIÓN BASICA</th>
+            </tr>
+        </thead>
+    </table>
+    <table class="wd100">
+        <tr>
+            <td class="tbl-nombre wd25">NOMBRE SOLICITANTE</td>
+            <td class="tbl-dato text-center wd20" colspan="3">{{ $data->solicitante_nombres }}
+                {{ $data->solicitante_apellidos }}</td>
+            <td class="tbl-nombre wd20">IDENTIFICACION</td>
+            <td class="tbl-dato text-center wd20">{{ $data->solicitante_documento }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre wd20">FECHA AVALÚO</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_avaluo }}</td>
+            <td class="tbl-nombre wd20">FECHA DE CORRECCION</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-nombre wd20">SECTOR</td>
+            <td class="tbl-dato text-center wd20">{{ $data->sector }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre wd20">DEPARTAMENTO</td>
+            <td class="tbl-dato text-center wd20">{{ $data->departamento }}</td>
+            <td class="tbl-nombre wd20">CIUDAD</td>
+            <td class="tbl-dato text-center wd20">{{ $data->municipio }}</td>
+            <td class="tbl-nombre wd20">CODIGO DANE</td>
+            <td class="tbl-dato text-center wd20">{{ $data->codigo_dane }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre wd20">DIRECCION DEL INMUEBLE</td>
+            <td class="tbl-dato text-center wd20" colspan="5">{{ $data->direccion }}</td>
+
+        </tr>
+        <tr>
+            <td class="tbl-nombre wd20">CONJUNTO/EDIFICIO</td>
+            <td class="tbl-dato text-center wd20" colspan="1">{{ $data->nombre_conjunto }}</td>
+            <td class="tbl-nombre wd20">USO</td>
+            <td class="tbl-dato text-center wd20">{{ $data->uso }}</td>
+            <td class="tbl-nombre wd20">BARRIO</td>
+            <td class="tbl-dato text-center wd20">{{ $data->barrio }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre wd20">TIPO DE AVALÚO</td>
+            <td class="tbl-dato text-center wd20" colspan="1">{{ $data->tipo_avaluo }}</td>
+            <td class="tbl-nombre wd20">METODOLOGIA VALUATORIA</td>
+            <td class="tbl-dato text-center wd20">{{ $data->metodo_valuatorio }}</td>
+            <td class="tbl-nombre wd20">OBJETO DE AVALÚO</td>
+            <td class="tbl-dato text-center wd20">{{ $data->objeto_avaluo }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre wd20">SISTEMA DE COORDENADAS</td>
+            <td class="tbl-dato text-center wd20" colspan="1">{{ $data->sistema_coordenadas }}</td>
+            <td class="tbl-nombre wd20">LATITUD</td>
+            <td class="tbl-dato text-center wd20">{{ $data->latitud }}</td>
+            <td class="tbl-nombre wd20">LONGITUD</td>
+            <td class="tbl-dato text-center wd20">{{ $data->longitud }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre wd20">JUSTIFICACION METODOLOGIA VALUATORIA</td>
+            <td class="tbl-dato text-center wd20" colspan="5">
+                <textarea class="text-area" name="" id="" cols="30" rows="10">{{ $data->justificacion_metodologia }}</textarea>
+            </td>
+
+        </tr>
+    </table>
+    <!-- fin INFORMACION BASICA -->
+    <div class="mt-1"></div>
+    <!-- inicio INFORMACION SECTOR/BARRIO -->
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd100">3. INFORMACION DEL SECTOR/BARRIO</th>
+            </tr>
+        </thead>
+    </table>
+    <table class="wd100">
+        <tbody>
+            <tr>
+                <td class="tbl-nombre text-center wd20">ESTRATO</td>
+                <td class="tbl-dato text-center wd20" colspan="1">{{ $data->estrato }}</td>
+                <td class="tbl-nombre text-center wd20">LEGALIDAD</td>
+                <td class="tbl-dato text-center wd20">
+                    @if ($data->legalidad == 0)
+                        No Aprobado
+                    @else
+                        Aprobado
+                    @endif
+                </td>
+                <td class="tbl-nombre text-center wd20">TOPOGRAFÍA</td>
+                <td class="tbl-dato text-center wd20">{{ $data->topografia }}</td>
+                <td class="tbl-nombre text-center wd20">TRANSPORTE</td>
+                <td class="tbl-dato text-center wd20">{{ $data->transporte }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mt-1"></div>
+    <table class="wd100 bh">
+        <tr>
+            <td class="bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="titulos tituloRec" style="font-size:10px" colspan="4">
+                            SERVICIOS PUBLICOS
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="tbl-nombre">TIPO</th>
+                        <th class="tbl-nombre">SECTOR</th>
+                        <th class="tbl-nombre">PREDIO</th>
+                        <th class="tbl-nombre">MEDIDOR</th>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">ACUEDUCTO</td>
+                        <td class="tbl-dato">{{ $data->sector_acueducto }}</td>
+                        <td class="tbl-dato">{{ $data->predio_acueducto }}</td>
+                        <td class="tbl-dato">{{ $data->contador_acueducto }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">AlCANTARILLADO</td>
+                        <td class="tbl-dato">{{ $data->sector_alcantarillado }}</td>
+                        <td class="tbl-dato">{{ $data->predio_alcantarillado }}</td>
+                        <td class="tbl-dato">{{ $data->contador_alcantarillado }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">E.ELECTRICA</td>
+                        <td class="tbl-dato">{{ $data->sector_energia_electrica }}</td>
+                        <td class="tbl-dato">{{ $data->predio_energia_electrica }}</td>
+                        <td class="tbl-dato">{{ $data->contador_energia_electrica }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">GAS NATURAL</td>
+                        <td class="tbl-dato">{{ $data->sector_gas }}</td>
+                        <td class="tbl-dato">{{ $data->predio_gas }}</td>
+                        <td class="tbl-dato">{{ $data->contador_gas }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">TELEFONIA</td>
+                        <td class="tbl-dato">{{ $data->sector_telefonia }}</td>
+                        <td class="tbl-dato">{{ $data->predio_telefonia }}</td>
+                        <td class="tbl-dato">{{ $data->contador_telefonia }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table titulos text-center">
+                    <tr>
+                        <td class="titulos tituloRec" style="font-size:10px" colspan="2">
+                            USO PREDOMINANTE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre wd20">Vivienda</td>
+                        <td class="tbl-dato">{{ $data->vivienda }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Industrial</td>
+                        <td class="tbl-dato">{{ $data->industrial }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Comercio</td>
+                        <td class="tbl-dato">{{ $data->comercio }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Mixto</td>
+                        <td class="tbl-dato">{{ $data->mixto }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Otro</td>
+                        <td class="tbl-dato">{{ $data->otro }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">-</td>
+                        <td class="wd20"></td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table titulos text-center">
+                    <tr>
+                        <td class="titulos tituloRec" style="font-size:10px" colspan="2">
+                            VIAS DE ACCESO
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre wd20">Estado</td>
+                        <td class="tbl-dato"> {{ $data->estado_vias }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Pavimentada</td>
+                        <td class="tbl-dato">
+                            @if ($data->pavimentada == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Andenes</td>
+                        <td class="tbl-dato">{{ $data->andenes }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Sardineles</td>
+                        <td class="tbl-dato">{{ $data->sardineles }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">-</td>
+                        <td class="tbl-dato"></td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">-</td>
+                        <td class="tbl-dato"></td>
+                    </tr>
+
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table titulos text-center">"">
+                    <tr>
+                        <td class="titulos tituloRec" style="font-size:10px" colspan="4">
+                            AMOBLAMIENTO URBANO
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre wd20">Parques</td>
+                        <td class="tbl-dato">{{ $data->parques }}</td>
+                        <td class="tbl-nombre">Ciclorutas</td>
+                        <td class="tbl-dato">{{ $data->ciclo_rutas }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Paradero</td>
+                        <td class="tbl-dato">{{ $data->paradero }}</td>
+                        <td class="tbl-nombre">Alamedas</td>
+                        <td class="tbl-dato">{{ $data->alamedas }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Alumbrado</td>
+                        <td class="tbl-dato">{{ $data->alumbrado }}</td>
+                        <td class="tbl-nombre">Z.Verdes</td>
+                        <td class="tbl-dato">{{ $data->verdes }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Arborización</td>
+                        <td class="tbl-dato">{{ $data->arborizacion }}</td>
+                        <td class="tbl-nombre"></td>
+                        <td class="tbl-dato"></td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">-</td>
+                        <td class="tbl-dato"></td>
+                        <td class="tbl-nombre"></td>
+                        <td class="tbl-dato"></td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">-</td>
+                        <td class="tbl-dato"></td>
+                        <td class="tbl-nombre"></td>
+                        <td class="tbl-dato"></td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="mt-1"></div>
+
+    <table class="wd100">
+        <tr>
+            <td class="tbl-nombre wd25">PERSPECTIVAS DE VALORIZACIÓN</td>
+            <td class="tbl-dato text-center">
+                <textarea class="text-area" name="" id="" cols="30" rows="10">{{ $data->perspectivas_valorizacion }}</textarea>
+            </td>
+        </tr>
+    </table>
+    <!-- fin INFORMACION SECTOR/BARRIO -->
+    <div class="mt-1"></div>
+    <!-- INICIO INFORMACION JURIDICA -->
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd100">4. INFORMACION JURIDICA</th>
+            </tr>
+        </thead>
+    </table>
+    <table class="wd100">
+        <tr>
+            <td class="tbl-nombre text-center wd20">TIPO</td>
+            <td class="tbl-dato text-center wd20">{{ $data->inmueble_tipo_inmueble }}</td>
+            <td class="tbl-nombre text-center wd20">UBICACÍON</td>
+            <td class="tbl-dato text-center wd20">{{ $data->ubicacion }}</td>
+            <td class="tbl-nombre text-center wd20">UBICACÍON INMUEBLE</td>
+            <td class="tbl-dato text-center wd20">{{ $data->ubicacion_inmueble }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre text-center wd20">PROPIETARIO</td>
+            <td class="tbl-dato text-center wd20">{{ $data->propietario }}</td>
+            <td class="tbl-nombre text-center wd20">USO</td>
+            <td class="tbl-dato text-center wd20">{{ $data->juridica_uso }}</td>
+            <td class="tbl-nombre text-center wd20">CLASE</td>
+            <td class="tbl-dato text-center wd20">{{ $data->clase }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre text-center wd20">M. INMOB. PPAL 1</td>
+            <td class="tbl-dato text-center wd20">{{ $data->m_inmob_ppal_1 }}</td>
+            <td class="tbl-nombre text-center wd20">M. INMOB. PPAL 2</td>
+            <td class="tbl-dato text-center wd20">{{ $data->m_inmob_ppal_2 }}</td>
+            <td class="tbl-nombre text-center wd20">M. INMOB. PPAL 3</td>
+            <td class="tbl-dato text-center wd20">{{ $data->m_inmob_ppal_3 }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre text-center wd20">M. INMOB. GJ 1</td>
+            <td class="tbl-dato text-center wd20">{{ $data->m_inmob_gj_1 }}</td>
+            <td class="tbl-nombre text-center wd20">M. INMOB. GJ 2</td>
+            <td class="tbl-dato text-center wd20">{{ $data->m_inmob_gj_2 }}</td>
+            <td class="tbl-nombre text-center wd20">M. INMOB. GJ 3</td>
+            <td class="tbl-dato text-center wd20">{{ $data->m_inmob_gj_3 }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre text-center wd20">M.INMOB. DP 1</td>
+            <td class="tbl-dato text-center wd20">{{ $data->m_inmob_dp_1 }}</td>
+            <td class="tbl-nombre text-center wd20">M.INMOB. DP 2</td>
+            <td class="tbl-dato text-center wd20">{{ $data->m_inmob_dp_2 }}</td>
+            <td class="tbl-nombre text-center wd20">M.INMOB. DP 3</td>
+            <td class="tbl-dato text-center wd20">{{ $data->m_inmob_dp_3 }}</td>
+        </tr>
+    </table>
+    <table class="wd100 bh-t">
+        <tbody>
+            <tr>
+                <td class="tbl-nombre text-center wd30">NÚMERO ESCRITURA</td>
+                <td class="tbl-dato text-center wd20">{{ $data->numero_escritura }}</td>
+                <td class="tbl-nombre text-center wd20">NUM. NOTARIA</td>
+                <td class="tbl-dato text-center wd20">{{ $data->numero_notaria }}</td>
+                <td class="tbl-nombre text-center wd20">CIUDAD NOTARIA</td>
+                <td class="tbl-dato text-center wd10">{{ $data->ciudad_notaria }}</td>
+                <td class="tbl-nombre text-center wd20">CHIP / CED. CASTAS</td>
+                <td class="tbl-dato text-center wd20">{{ $data->chip_ced_castas }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="wd100 bh-t">
+        <tbody>
+            <tr>
+                <td class="tbl-nombre text-center wd20">FECHA EXPEDICIÓN ESCRITURA</td>
+                <td class="tbl-dato text-center wd20">{{ $data->expedicion_escritura }}</td>
+                <td class="tbl-nombre text-center wd20">LICENCIA DE CONSTRUCCIÓN</td>
+                <td class="tbl-dato text-center wd20">{{ $data->licencia_construccion }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- FIN INFORMACION JURIDICA -->
+    <div class="mt-1"></div>
+    <!-- INICIO INFORMACION DEL INMUEBLE -->
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd100">5. INFORMACION DEL INMUEBLE</th>
+            </tr>
+        </thead>
+    </table>
+    <table class="wd100">
+        <tr>
+            <td class="tbl-nombre text-center wd20">AÑO CONSTRUCCIÓN</td>
+            <td class="tbl-dato text-center wd10">{{ $data->ano_construccion }}</td>
+            <td class="tbl-nombre text-center wd20">VETUSTEZ</td>
+            <td class="tbl-dato text-center wd10">{{ $data->vetustez }}</td>
+            <td class="tbl-nombre text-center wd20">VIDA UTIL</td>
+            <td class="tbl-dato text-center wd10">{{ $data->vida_util }}</td>
+            <td class="tbl-nombre text-center wd20">VIDA REMANENTE</td>
+            <td class="tbl-dato text-center wd10">{{ $data->vida_remanente }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre text-center wd20">ESTADO CONSTRUCCIÓN</td>
+            <td class="tbl-dato text-center wd10"> {{ $data->estado_construccion }}
+
+            </td>
+            <td class="tbl-nombre text-center wd20">NUM. DE PISOS</td>
+            <td class="tbl-dato text-center wd10">{{ $data->numero_pisos }}</td>
+            <td class="tbl-nombre text-center wd20">NUM. DE SOTANOS</td>
+            <td class="tbl-dato text-center wd10">{{ $data->numero_sotanos }}</td>
+            <td class="tbl-nombre text-center wd20">ESTADO DE CONSERVACIÓN</td>
+            <td class="tbl-dato text-center wd10">{{ $data->estado_conservacion }}</td>
+        </tr>
+    </table>
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+
+    <!-- inicio header -->
+    <table class="wd100">
+        <tbody>
+            <tr>
+                <td class="img-title" style="text-align: right;"><img class="img-valorar" src="img/Valorar.png"
+                        alt="imgvalorar" style="margin-right: 50px"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- inicio header -->
+    <div class="mt-1"></div>
+    <!-- INICIO estado de la construccion -->
+    <table class="tbl-item-gris wd100">
+        <thead>
+            <tr>
+                <th class="wd100">ESTADO DE LA CONSTRUCCIÓN</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="mt-1"></div>
+    <table class="table-datos">
+        <tr>
+            <td class="bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre wd10">TERMINADA</td>
+                        <td class="tbl-dato wd10">{{ $data->terminada }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">SIN TERMINADA</td>
+                        <td class="tbl-dato">{{ $data->sin_terminar }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">REMODELADO</td>
+                        <td class="tbl-dato">{{ $data->remodelado }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">EN OBRA</td>
+                        <td class="tbl-dato">{{ $data->en_obra }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">AVANCE DE OBRA EN %</td>
+                        <td class="tbl-dato">-</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre wd10">IRREGULARIDAD DE PLANTA</td>
+                        <td class="tbl-dato wd10">{{ $data->irregularidad_planta }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">IRREGULARIDAD DE ALTURA</td>
+                        <td class="tbl-dato">{{ $data->irregularidad_altura }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">DAÑOS PREVIOS</td>
+                        <td class="tbl-dato">{{ $data->danos_previos }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">REPARADOS</td>
+                        <td class="tbl-dato">{{ $data->reparados }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre wd10">ESTRUCTURA</td>
+                        <td class="tbl-dato wd10">{{ $data->estructura }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">FACHADA</td>
+                        <td class="tbl-dato">{{ $data->fachada }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">CUBIERTA</td>
+                        <td class="tbl-dato">{{ $data->cubierta }}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- FIN estado de la construccion -->
+    <div class="mt-1"></div>
+    <!-- INICIO DEPENDENCIAS -->
+    <table class="tbl-item-gris wd100">
+        <thead>
+            <tr>
+                <th class="wd100">DEPENDENCIAS</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="mt-1"></div>
+    <table class="table-datos">
+        <tr>
+            <td class="bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">BAÑO SOCIAL</td>
+                        <td class="tbl-dato wd40">{{ $data->banos_sociales_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">SALA</td>
+                        <td class="tbl-dato wd40">{{ $data->salas_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">COMEDOR</td>
+                        <td class="tbl-dato wd40">{{ $data->comedores_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">ESTAR HAB.</td>
+                        <td class="tbl-dato wd40">{{ $data->habitaciones_star_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">BALCON</td>
+                        <td class="tbl-dato wd40">{{ $data->balcones_cantidad }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">BAÑO PRIVADO</td>
+                        <td class="tbl-dato wd40">{{ $data->banos_privados_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">COCINA</td>
+                        <td class="tbl-dato wd40">{{ $data->cocinas_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">HABITACIONES</td>
+                        <td class="tbl-dato wd40">{{ $data->habitaciones_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">ESTUDIO</td>
+                        <td class="tbl-dato wd40">{{ $data->estudios_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">PARIO INTERIOR</td>
+                        <td class="tbl-dato wd40">{{ $data->patio_interior_cantidad }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">BAÑO SERVICIO</td>
+                        <td class="tbl-dato wd40">{{ $data->banos_servicio_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">CUARTO SERV.</td>
+                        <td class="tbl-dato wd40">{{ $data->cuartos_servicio_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">JARDIN</td>
+                        <td class="tbl-dato wd40">{{ $data->jardines_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">TERRAZA</td>
+                        <td class="tbl-dato wd40">{{ $data->terrazas_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">Z. VERDE PRIV.</td>
+                        <td class="tbl-dato wd40">{{ $data->zonas_verdes_cantidad }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">TOTAL GARAJES</td>
+                        <td class="tbl-dato wd40">{{ $data->garajes_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">CUBIERTO</td>
+                        <td class="tbl-dato wd40">{{ $data->garajes_cubiertos_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">DESCUBIERTO</td>
+                        <td class="tbl-dato wd40">{{ $data->garajes_descubiertos_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">DEPOSITO</td>
+                        <td class="tbl-dato wd40">{{ $data->depositos_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">PRIVADO</td>
+                        <td class="tbl-dato wd40">{{ $data->garajes_privados_cantidad }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">USO EXCLUSIVO</td>
+                        <td class="tbl-dato wd40">{{ $data->garajes_uso_exclusivo_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">SENCILLO</td>
+                        <td class="tbl-dato wd40">{{ $data->garajes_sencillo_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">LOCAL</td>
+                        <td class="tbl-dato wd40">{{ $data->locales_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">DOBLE</td>
+                        <td class="tbl-dato wd40">{{ $data->garajes_dobles_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">BAHÍA COMUNAL</td>
+                        <td class="tbl-dato wd40">{{ $data->bahia_comunal_cantidad }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">OFICINA</td>
+                        <td class="tbl-dato wd40">{{ $data->oficinas_cantidad }}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="mt-1"></div>
+    <table class="wd100">
+        <tr>
+            <td class="tbl-nombre wd20">ILUMINACIÓN</td>
+            <td class="tbl-dato wd20">{{ $data->iluminacion }}</td>
+            <td class="tbl-nombre wd20">VENTILACIÓN</td>
+            <td class="tbl-dato wd20">{{ $data->ventilacion }}</td>
+            <td class="tbl-nombre wd20">OBS. DEPENDENCIAS</td>
+            <td class="tbl-dato wd20">{{ $data->observaciones_dependencias }}</td>
+        </tr>
+    </table>
+    <div class="mt-1"></div>
+    <!-- FIN DEPENDENICAS -->
+
+    <!-- INICIO ACABADOS -->
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd100">ACABADOS</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="mt-1"></div>
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd50">ESTADO</th>
+                <th class="wd50">CALIDAD</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="mt-1"></div>
+    <table class="wd100">
+        <tr>
+            <!--estado-->
+            <td class="tbl-nombre text-center wd20">PISOS</td>
+            <td class="tbl-dato text-center wd20">{{ $data->estado_pisos }}</td>
+            <td class="tbl-nombre text-center wd20">C. METAL</td>
+            <td class="tbl-dato text-center wd20">{{ $data->estado_carpinteria_metal }}</td>
+            <!--calidad-->
+            <td class="tbl-nombre text-center wd20">PISOS</td>
+            <td class="tbl-dato text-center wd20">{{ $data->calidad_pisos }}</td>
+            <td class="tbl-nombre text-center wd20">C. METAL</td>
+            <td class="tbl-dato text-center wd20">{{ $data->calidad_carpinteria_metal }}</td>
+        </tr>
+        <tr>
+            <!--estado-->
+            <td class="tbl-nombre text-center wd20">MUROS</td>
+            <td class="tbl-dato text-center wd20">{{ $data->estado_muros }}</td>
+            <td class="tbl-nombre text-center wd20">C. MADERA</td>
+            <td class="tbl-dato text-center wd20">{{ $data->estado_carpinteria_madera }}</td>
+            <!--calidad-->
+            <td class="tbl-nombre text-center wd20">MUROS</td>
+            <td class="tbl-dato text-center wd20">{{ $data->calidad_muros }}</td>
+            <td class="tbl-nombre text-center wd20">C. MADERA</td>
+            <td class="tbl-dato text-center wd20">{{ $data->calidad_carpinteria_madera }}</td>
+        </tr>
+        <tr>
+            <!--estado-->
+            <td class="tbl-nombre text-center wd20">TECHOS</td>
+            <td class="tbl-dato text-center wd20">{{ $data->estado_techos }}</td>
+            <td class="tbl-nombre text-center wd20">BAÑOS</td>
+            <td class="tbl-dato text-center wd20">{{ $data->estado_banos }}</td>
+            <!--calidad-->
+            <td class="tbl-nombre text-center wd20">TECHOS</td>
+            <td class="tbl-dato text-center wd20">{{ $data->calidad_techos }}</td>
+            <td class="tbl-nombre text-center wd20">BAÑOS</td>
+            <td class="tbl-dato text-center wd20">{{ $data->calidad_banos }}</td>
+        </tr>
+        <tr>
+            <!--estado-->
+            <td class="bh-b bh-l" colspan="2"></td>
+            <td class="tbl-nombre text-center wd20">COCINA</td>
+            <td class="tbl-dato text-center wd20">{{ $data->estado_cocinas }}</td>
+            <!--calidad-->
+            <td class="bh-b" colspan="2"></td>
+            <td class="tbl-nombre text-center wd20">COCINA</td>
+            <td class="tbl-dato text-center wd20">{{ $data->calidad_cocinas }}</td>
+        </tr>
+    </table>
+    <!-- FIN ACABADOS -->
+
+    <div class="mt-1"></div>
+
+    <!-- INICIO PROPIEDAD HORIZONTAL -->
+    <table class="tbl-item-gris wd100">
+        <thead>
+            <tr>
+                <th class="wd100">PROPIEDAD HORIZONTAL</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="mt-1"></div>
+    <table class="table-datos">
+        <tr>
+            <td class="bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre wd20">SOMETIDO A PROPIEDAD HORIZONTAL</td>
+                        <td class="tbl-dato wd10">
+                            @if ($data->sometido == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">NUMERO EDIFICIO / CASAS</td>
+                        <td class="tbl-dato">{{ $data->numero_edificios }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre wd10">CON. O AGRUO. CERRADA</td>
+                        <td class="tbl-dato wd10">
+                            @if ($data->conjunto_cerrado == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">UNIDADES POR PISO</td>
+                        <td class="tbl-dato">{{ $data->unidades_por_piso }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">TOTAL UNIDADES</td>
+                        <td class="tbl-dato">{{ $data->total_unidades }}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- FIN PROPIEDAD HORIZONTAL -->
+
+    <div class="mt-1"></div>
+
+    <!-- INICIO INFORMACION DE LA DOTACION COMUNAL -->
+    <table class="tbl-item-gris wd100">
+        <thead>
+            <tr>
+                <th class="wd100">INFORMACION DE LA DOTACION COMUNAL</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="mt-1"></div>
+    <table class="wd100">
+        <tr>
+            <td class="tbl-nombre text-center wd20">PORTERÍA</td>
+            <td class="tbl-dato text-center wd10">{{ $data->porteria }}</td>
+            <td class="tbl-nombre text-center wd20">PISCINA</td>
+            <td class="tbl-dato text-center wd10">{{ $data->piscina }}</td>
+            <td class="tbl-nombre text-center wd20">Z. VERDES</td>
+            <td class="tbl-dato text-center wd10">{{ $data->zonas_verdes }}</td>
+            <td class="tbl-nombre text-center wd20">EQ. PRESION CONS.</td>
+            <td class="tbl-dato text-center wd10">{{ $data->eq_presion_const }}</td>
+
+        </tr>
+        <tr>
+            <td class="tbl-nombre text-center wd20">CITÓFONO</td>
+            <td class="tbl-dato text-center wd10">{{ $data->citofono }}</td>
+            <td class="tbl-nombre text-center wd20">GJ. VISITAN</td>
+            <td class="tbl-dato text-center wd10">{{ $data->gj_visitantes }}</td>
+            <td class="tbl-nombre text-center wd20">PLANTA ELECTRICAA</td>
+            <td class="tbl-dato text-center wd10">{{ $data->planta_electrica }}</td>
+            <td class="tbl-nombre text-center wd20">ASCENSOR</td>
+            <td class="tbl-dato text-center wd10">{{ $data->ascensor }}</td>
+
+        </tr>
+        <tr>
+            <td class="tbl-nombre text-center wd20">BICICLETERO</td>
+            <td class="tbl-dato text-center wd10">{{ $data->bicicletero }}</td>
+            <td class="tbl-nombre text-center wd20">SALON CMUNAL</td>
+            <td class="tbl-dato text-center wd10">{{ $data->salon_comunal }}</td>
+            <td class="tbl-nombre text-center wd20">GIMNASIO</td>
+            <td class="tbl-dato text-center wd10">{{ $data->gimnasio }}</td>
+            <td class="tbl-nombre text-center wd20">NUM. ACEN.</td>
+            <td class="tbl-dato text-center wd10">{{ $data->cantidad_ascensores }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre text-center wd20">JUEGO NIÑOS</td>
+            <td class="tbl-dato text-center wd10">{{ $data->juego_ninos }}</td>
+            <td class="tbl-nombre text-center wd20">TANQUE AGUA</td>
+            <td class="tbl-dato text-center wd10">{{ $data->tanque_agua }}</td>
+            <td class="tbl-nombre text-center wd20">SHUT BASURAS</td>
+            <td class="tbl-dato text-center wd10">{{ $data->shut_basuras }}</td>
+            <td class="tbl-nombre text-center wd20">OTROS</td>
+            <td class="tbl-dato text-center wd10">{{ $data->otros }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre text-center wd20">CANCHA MULT.</td>
+            <td class="tbl-dato text-center wd10">{{ $data->cancha_multif }}</td>
+            <td class="tbl-nombre text-center wd20">BOMBA EYECTORA</td>
+            <td class="tbl-dato text-center wd10">{{ $data->bomba_eyectora }}</td>
+            <td class="tbl-nombre text-center wd20">GOLFITO</td>
+            <td class="tbl-dato text-center wd10">{{ $data->golfito }}</td>
+            <td class="bh-b bh-r" colspan="2"></td>
+        </tr>
+        <tr>
+            <td class="tbl-nombre text-center wd20">CLUB HOUSE</td>
+            <td class="tbl-dato text-center wd10">{{ $data->club_house }}</td>
+            <td class="tbl-nombre text-center wd20">CANCHA SQUACH</td>
+            <td class="tbl-dato text-center wd10">{{ $data->cancha_squash }}</td>
+            <td class="tbl-nombre text-center wd20">AIRE CENTRAL</td>
+            <td class="tbl-dato text-center wd10">{{ $data->aire_ac_entral }}</td>
+            <td class="bh-b bh-r" colspan="2"></td>
+        </tr>
+    </table>
+    <div class="mt-1"></div>
+    <table class="tbl-item-gris wd100">
+        <thead>
+            <tr>
+                <th class="wd50">ACTUALIDAD EDIFICADORA</th>
+                <th class="wd50">COMPORTAMIENTO OFERTA Y DEMANDA</th>
+            </tr>
+        </thead>
+    </table>
+    <table class="wd100 bh-t">
+        <tr>
+            <td class="tbl-dato text-center wd50">{{ $data->actualidad_edificadora }}</td>
+            <td class="tbl-dato text-center wd50">{{ $data->comportamiento_oferta }}</td>
+        </tr>
+    </table>
+    <table class="wd50 bh-t">
+        <thead>
+            <tr>
+                <th class="wd40" style="background-color: #B1B4BC; color: #000000; font-size: 10px;">TIEMPO ESPERADO
+                    COMERCIALIZACION (MESES)</th>
+                <td class="tbl-dato text-center wd10">{{ $data->tiempo_esperado_oferta }}</td>
+            </tr>
+        </thead>
+    </table>
+    <!-- FIN INFORMACION DE LA DOTACION COMUNAL -->
+
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+
+    <!-- inicio header -->
+    <table class="wd100">
+        <tbody>
+            <tr>
+                <td class="img-title" style="text-align: right;"><img class="img-valorar" src="img/Valorar.png"
+                        alt="imgvalorar" style="margin-right: 50px"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- inicio header -->
+
+    <!-- INICIO LIQUIDACIÓN DE AVALÚO -->
+    <table class="tbl-item-gris wd100 bh-t">
+        <thead>
+            <tr>
+                <th class="wd100">LIQUIDACIÓN DE AVALÚO</th>
+            </tr>
+        </thead>
+    </table>
+    <table class="wd100 bh-t">
+
+        <tr>
+            <td class="tbl-nombre text-center wd20">DESCRIPCIÓN</td>
+            <td class="tbl-nombre text-center wd20">ÁREA (m<sup style="font-size:7px">2</sup>)</td>
+            <td class="tbl-nombre text-center wd20">VALOR UNITARIO (m<sup style="font-size:7px">2</sup>)</td>
+            <td class="tbl-nombre text-center wd20">VALOR TOTAL</td>
+        </tr>
+        <tr>
+            <td class="tbl-dato text-center wd20">Area Privada</td>
+            <td class="tbl-dato text-center wd20">{{ $data->area_privada }}</td>
+            <td class="tbl-dato text-right wd20">
+                {{ '$' . number_format($data->valor_total_avaluo / $data->area_privada, 0, ',', '.') }}</td>
+            <td class="tbl-dato text-right wd20">{{ '$' . number_format($data->valor_total_avaluo, 0, ',', '.') }}
+            </td>
+        </tr>
+        <tr>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+            <td class="tbl-dato text-center wd20">{{ $data->fecha_correccion }}</td>
+        </tr>
+        <tr>
+            <td class="bh-l bh-b" colspan="2"></td>
+            <th class="" style="background-color: #B1B4BC; color: #000000; font-size: 10px;">VALOR TOTAL DEL
+                AVALÚO
+            </th>
+            <td class="tbl-dato text-right wd20">{{ '$' . number_format($data->valor_total_avaluo, 0, ',', '.') }}
+            </td>
+        </tr>
+        <tr>
+            <td class="bh-l bh-b" colspan="2"></td>
+            <th class="" style="background-color: #B1B4BC; color: #000000; font-size: 10px;">VALOR ASEGURABLE
+            </th>
+            <td class="tbl-dato text-right wd20">{{ '$' . number_format($data->valor_asegurable, 0, ',', '.') }}</td>
+        </tr>
+    </table>
+    <!-- FIN LIQUIDACIÓN DE AVALÚO -->
+    <div class="mt-1"></div>
+
+    <!-- INICIO OTRAS OBSERVACIONES -->
+    <table class="wd100">
+        <tr>
+            <th class="wd30" style="background-color: #B1B4BC; color: #000000; font-size: 10px;">CALIFICACIÓN
+                GARANTÍA
+            </th>
+            <td class="tbl-dato-azul  text-center wd20">{{ $data->fecha_correccion }}</td>
+            <th class="wd30" style="background-color: #B1B4BC; color: #000000; font-size: 10px;">TIPO DE VIVIENDA
+            </th>
+            <td class="tbl-dato-azul text-center wd20">{{ $data->fecha_correccion }}</td>
+        </tr>
+    </table>
+    <div class="mt-1"></div>
+    <table class="wd100">
+        <tr>
+            <th class="wd30" style="background-color: #B1B4BC; color: #000000; font-size: 10px;">OTRAS DIRECCIONES
+            </th>
+            <td class="tbl-dato text-center">{{ $data->fecha_correccion }}</td>
+        </tr>
+    </table>
+    <table class="wd100 bh-t">
+        <tr>
+            <td class="tbl-dato"><span class="tbl-span" style="font-size:8px;">LOCALIZACIÓN DEL
+                    PREDIO:</span><br />{{ $data->localizacion_predio }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-dato"><span class="tbl-span" style="font-size:8px;">DOCUMENTOS
+                    SUMINISTRADOS:</span><br />{{ $data->documentos_suministrados }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-dato"><span class="tbl-span" style="font-size:8px;">DESCRIPCIÓN DEL
+                    INMUEBLE:</span><br />{{ $data->descripcion_inmueble }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-dato"><span class="tbl-span" style="font-size:8px;">OBSERVACIONES
+                    GENERALES:</span><br />{{ $data->observaciones_generales }}</td>
+        </tr>
+        <tr>
+            <td class="tbl-dato"><span class="tbl-span" style="font-size:8px;">NORMATIVIDAD
+                    POT:</span><br />{{ $data->normatividad_pot }}</td>
+        </tr>
+    </table>
+    <!-- FIN OTRAS OBSERVACIONES -->
+    <div class="mt-1"></div>
+
+    <!-- INICIO CONDICIONES DE SALUBRIDAD E IMPACTO AMBIENTAL -->
+    <table class="tbl-item-gris wd100">
+        <thead>
+            <tr>
+                <th class="wd100">CONDICIONES DE SALUBRIDAD E IMPACTO AMBIENTAL</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="mt-1"></div>
+    <table class="table-datos">
+        <tr>
+            <td class="bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre wd20">CONDICIONES DE SALUBRIDAD</td>
+                        <td class="tbl-dato wd10">{{ $data->condiciones_salubridad }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre wd10">IMPACTO AMBIENTAL</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">POR AIRE</td>
+                        <td class="tbl-dato">{{ $data->aire }}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table class="table-datos" style="margin-top:5px;">
+        <tr>
+            <td class="bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">POSITIVO</td>
+                        <td class="tbl-dato">{{ $data->estado_positivo }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">NEGATIVO</td>
+                        <td class="tbl-dato">{{ $data->estado_negativo }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">ARBOLIZACIÓN</td>
+                        <td class="tbl-dato">
+                            @if ($data->arborizacion == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">DISPOSICION AGUAS SERVIDAS</td>
+                        <td class="tbl-dato">
+                            @if ($data->aguas_servidas == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">RUIDO</td>
+                        <td class="tbl-dato">
+                            @if ($data->ruido == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">PARQUES</td>
+                        <td class="tbl-dato">
+                            @if ($data->parques == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">Z. VERDES</td>
+                        <td class="tbl-dato">
+                            @if ($data->zonas_verdes == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">POSITIVO</td>
+                        <td class="tbl-dato">
+                            @if ($data->condiciones_positivo == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td class="tbl-nombre">INSEGURO</td>
+                        <td class="tbl-dato">
+                            @if ($data->inseguro == 0)
+                                NO
+                            @else
+                                SI
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl-nombre">OTROS</td>
+                        <td class="tbl-dato">{{ $data->otros }}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- FIN CONDICIONES DE SALUBRIDAD E IMPACTO AMBIENTAL -->
+
+    <div class="mt-1"></div>
+
+    <!-- INCIO FIRMA DOCUMENTO-->
+    <div style="border: solid black">
+        <table class="wd100 bh">
+
+            <tr>
+                <td class="tbl-dato bh wd20" style="font-weight: bold; font-size:10px;">PERITO AVALUADOR</td>
+                <td class="bh-l bh-r bg-t text-center wd30">{{ auth()->user()->name }}</td>
+                <td class="text-center" colspan="5" rowspan="3">firma</td>
+            </tr>
+            <tr>
+                <td class="tbl-dato bh wd20" style="font-weight: bold; font-size:10px;">C.C / NIT</td>
+                <td class="bh-l bh-r bg-t text-center wd30">{{ $data->avaluo_id }}</td>
+
+            </tr>
+            <tr>
+                <td class="tbl-dato bh wd20" style="font-weight: bold; font-size:10px;">FECHA</td>
+                <td class="bh-l bh-r bg-t text-center wd30">{{ $data->fecha_avaluo }}</td>
+
+            </tr>
+            <tr>
+                <td class="tbl-dato bh wd20" style="font-weight: bold; font-size:10px;">REPRESENTANTE LEGAL</td>
+                <td class="bh-l bh-r bg-t text-center wd30">{{ $empresa->representante_legal }}</td>
+                <td class="bh wd10"></td>
+                <td class="bh-l bh-r bg-t text-center wd50" style="font-weight: bold; font-size:10px;"
+                    colspan="3">
+                    FIRMA
+                </td>
+                <td class="bh wd10"></td>
+            </tr>
+            <tr>
+                <td class="tbl-dato bh wd20" style="font-weight: bold; font-size:10px;">C.C / NIT</td>
+                <td class="bh-l bh-r bg-t text-center wd30">{{ $empresa->cedula }}</td>
+                <td class="text-center bh-t " colspan="5" rowspan="3">firma</td>
+            </tr>
+            <tr>
+                <td class="tbl-dato bh wd20" style="font-weight: bold; font-size:10px;">FECHA</td>
+                <td class="bh-l bh-r bg-t text-center wd30">{{ $data->fecha_avaluo }}</td>
+
+            </tr>
+            <tr>
+                <td class="tbl-dato bh wd20" style="font-weight: bold; font-size:10px;">R.A.A</td>
+                <td class="bh-l bh-r bg-t text-center wd30">{{ $data->avaluo_id }}</td>
+            </tr>
+            <tr>
+                <td class="tbl-dato bh wd20" style="font-weight: bold; font-size:10px;"></td>
+                <td class="tbl-dato text-center wd20" style="font-weight: bold; font-size:10px;">VALORAR S.A</td>
+                <td class="bh wd10"></td>
+                <td class="text-center wd50" style="font-weight: bold; font-size:10px;" colspan="3">FIRMA
+                    REPRESENTANTE
+                    LEGAL</td>
+                <td class="bh wd10"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- FIN FIRMA DOCUMENTO-->
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+
+    <!-- Pgina incluida del informe comparacion -->
+    <div class="hizont">
+        @include('admin.datos.informe_pdf_comparacion')
+    </div>
+    <!-- FIN COMPARACION DE MERCADO-->
+
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+
+    <!-- inicio header -->
+    <table class="wd100">
+        <tbody>
+            <tr>
+                <td class="img-title" style="text-align: right;"><img class="img-valorar" src="img/Valorar.png"
+                        alt="imgvalorar" style="margin-right: 50px"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- INICIO ANEXO FOTOGRAFICO-->
+    <div class="mt-1"></div>
+    <table class="bh wd100">
+        <thead>
+            <tr>
+                <th class="wd100">ANEXO FOTOGRAFICO</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="mt-1"></div>
+
+    <div class="div-img">
+        @foreach ($documentos as $documento)
+                <div class="img-container" style="margin-top: 50px">
+                    <div class="image-margin" style="">
+                        <img class="img-vista" src="{{ $documento->url }}" alt="FotoAlt" title="">
+                        <div class="div-strong">
+                            <strong class="text-center">{{ $documento->nombre_imagen }}</strong>
+                        </div>
+                    </div>
+                </div>
+        @endforeach
+    </div>
+
+
+    <!-- FIN ANEXO FOTOGRAFICO-->
+
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+    </div>
+
+    <!-- inicio header -->
+    <table class="wd100">
+        <tbody>
+            <tr>
+                <td class="img-title" style="text-align: right;"><img class="img-valorar" src="img/Valorar.png"
+                        alt="imgvalorar" style="margin-right: 50px"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mt-1"></div>
+    <!-- INICIO MAPA DE LOCALIZACION GENERAL-->
+    <table class="bh wd100">
+        <thead>
+            <tr>
+                <th class="wd100">MAPA DE LOCALIZACION GENERAL</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="mt-1"></div>
+    <table class="table-datos">
+        <tr>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        @if ($geolocalizacion_sector != null)
+                            <td class="tbl-img" colspan="2"><img class="tbl-img" src="{{ $geolocalizacion_sector->url }}"
+                                    alt="Mapa de geolocalizacion"></td>
+                        @else
+                            <td class="tbl-img" colspan="2">No se a cargado imagen</td>
+                        @endif
+                    </tr>
+                    <tr>
+                        <td class="tbl-dato wd50">COORDENADAS: {{ $data->latitud }} - {{ $data->longitud }}</td>
+                        <td class="tbl-dato">FUENTE: GOOGLE MAPS</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- FIN MAPA DE LOCALIZACION GENERAL-->
+    </div>
+
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+    </div>
+
+    <!-- inicio header -->
+    <table class="wd100">
+        <tbody>
+            <tr>
+                <td class="img-title" style="text-align: right;"><img class="img-valorar" src="img/Valorar.png"
+                        alt="imgvalorar" style="margin-right: 50px"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mt-1"></div>
+
+    <!-- INICIO NOTAS ADICIONALES -->
+    @php
+        // Obtener el contenido de CKEditor desde la base de datos (reemplaza esta línea con tu lógica para obtener el contenido)
+        $notObs = $data->notas_observaciones;
+        $docSum = $data->notas_documentos_suministrados;
+        $notFte = $data->notas_fuente_areas;
+        $notNor = $data->notas_normatividad;
+        
+        // Configurar HTML Purifier
+        $config = \HTMLPurifier_Config::createDefault();
+        $purifier = new \HTMLPurifier($config);
+        
+        // Limpiar el contenido HTML usando HTML Purifier
+        $purifier->purify($notObs);
+        $purifier->purify($docSum);
+        $purifier->purify($notFte);
+        $purifier->purify($notNor);
+        
+    @endphp
+    <table class="bh wd100">
+        <thead>
+            <tr>
+                <th class="wd100">NOTAS ADICIONALES</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="mt-1"></div>
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd100">OBSERVACIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="">{!! $notObs !!}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="mt-1"></div>
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd100">DOCUMENTOS SUMINISTRADOS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tbl-dato">{!! $docSum !!}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="mt-1"></div>
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd100">FUENTE AREAS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tbl-dato">{!! $notFte !!}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="mt-1"></div>
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd100">NORMATIVIDAD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tbl-dato">{!! $notNor !!}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- FIN NOTAS ADICIONALES -->
+
+    <!-- salto de pagina -->
+    <div style="page-break-after:always;"></div>
+    </div>
+
+    <!-- inicio header -->
+    <table class="wd100">
+        <tbody>
+            <tr>
+                <td class="img-title" style="text-align: right;"><img class="img-valorar" src="img/Valorar.png"
+                        alt="imgvalorar" style="margin-right: 50px"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mt-1"></div>
+    <!-- INICIO MAPA DE LOCALIZACION GENERAL-->
+    <table class="tbl-item wd100">
+        <thead>
+            <tr>
+                <th class="wd100">LOCALIZACIÓN</th>
+            </tr>
+        </thead>
+    </table>
+    <table class="table-datos">
+        <tr>
+            <td class="pl-1 bh-r">
+                <table class="table-in-table text-center">
+                    <tr>
+                        <td colspan="2">COORDENDAS</td>
+                    </tr>
+                    <tr>
+                        <td>LATITUD</td>
+                        <td>{{ $data->latitud }}</td>
+                    </tr>
+                    <tr>
+                        <td>LONGITUD</td>
+                        <td>{{ $data->longitud }}</td>
+                    </tr>
+                    <tr>
+                        @if ($geolocalizacion_predio != null)
+                            <td class="tbl-img" colspan="2"><img class="tbl-img" src="{{ $geolocalizacion_predio->url }}"
+                                    alt="Mapa de geolocalizacion"></td>
+                        @else
+                            <td class="tbl-img" colspan="2">No se a cargado imagen</td>
+                        @endif
+                    </tr>
+                    <tr>
+                        <td class="tbl-dato" colspan="2">FUENTE: GOOGLE MAPS</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- FIN MAPA DE LOCALIZACION GENERAL-->
+
+</body>
+
+</html>
